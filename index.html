@@ -19,6 +19,486 @@
            🔥 STATUS: LIVE · SECURE · VERIFIED · CITADEL
            🔥 OWNER: Anas Farooq — Nightorbit International
            ============================================================ */
+        /* ============================================================
+   🔥 FEEDBACK SECTION — HEAVY STYLES
+   ============================================================ */
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    align-items: center;
+}
+
+.filter-bar select {
+    background: var(--bg);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 60px;
+    padding: 10px 18px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    min-width: 140px;
+}
+
+.filter-bar select:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.05);
+}
+
+.filter-bar select option {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.filter-bar .btn {
+    padding: 10px 24px;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #000;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--muted);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.btn-sm {
+    padding: 6px 16px;
+    font-size: 10px;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: #000;
+    font-weight: 700;
+}
+
+.btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+}
+
+/* Feedback List */
+.feedback-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.feedback-item {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: 0.3s;
+}
+
+.feedback-item:hover {
+    border-color: rgba(0, 210, 255, 0.08);
+    transform: translateX(4px);
+}
+
+.feedback-item .fi-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.feedback-item .fi-header .fi-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+}
+
+.feedback-item .fi-header .fi-location {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.feedback-item .fi-header .fi-stars {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-left: auto;
+}
+
+.feedback-item .fi-review {
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.7;
+    margin: 4px 0 2px;
+}
+
+.feedback-item .fi-time {
+    font-size: 9px;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+.feedback-item .fi-project-tag {
+    font-size: 8px;
+    background: rgba(0, 210, 255, 0.06);
+    padding: 2px 12px;
+    border-radius: 20px;
+    color: var(--primary);
+    border: 1px solid rgba(0, 210, 255, 0.06);
+}
+
+/* Load More Button */
+.load-more-btn {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.load-more-btn button {
+    padding: 10px 30px;
+    border-radius: 60px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.load-more-btn button:hover {
+    border-color: var(--primary);
+    color: #fff;
+}
+
+/* ============================================================
+   🔥 RATE & REVIEW FORM — HEAVY STYLES
+   ============================================================ */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    color: var(--text);
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.05);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+    border-radius: 12px;
+}
+
+.form-group select option {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Star Rating */
+.star-rating-input {
+    display: flex;
+    gap: 4px;
+    font-size: 32px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.star-rating-input .star {
+    color: #333;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.star-rating-input .star.active {
+    color: var(--gold);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.star-rating-input .star:hover {
+    transform: scale(1.15);
+    color: var(--gold);
+}
+
+/* ============================================================
+   🔥 CONTACT SECTION — HEAVY STYLES
+   ============================================================ */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.contact-grid .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: 0.3s;
+}
+
+.contact-grid .card:hover {
+    border-color: rgba(0, 210, 255, 0.08);
+}
+
+.contact-grid .card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+
+/* Contact Info Items */
+.ci-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.ci-item .ci-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 210, 255, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.ci-item .ci-text {
+    font-size: 13px;
+    color: var(--text);
+}
+
+/* ============================================================
+   🔥 RESPONSIVE — FIXED
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-bar select {
+        min-width: auto;
+    }
+
+    .filter-bar .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .feedback-item {
+        padding: 14px 16px;
+    }
+
+    .feedback-item .fi-header {
+        flex-wrap: wrap;
+    }
+
+    .feedback-item .fi-header .fi-stars {
+        margin-left: 0;
+    }
+
+    .star-rating-input {
+        font-size: 28px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 14px;
+        padding: 14px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback-item .fi-header .fi-name {
+        font-size: 13px;
+    }
+
+    .feedback-item .fi-review {
+        font-size: 12px;
+    }
+
+    .star-rating-input {
+        font-size: 24px;
+    }
+
+    .contact-grid .card {
+        padding: 18px;
+    }
+
+    .filter-bar {
+        padding: 12px;
+    }
+}
+
+/* ============================================================
+   🔥 MISC FIXES
+   ============================================================ */
+
+/* Toast message */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--card);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 14px 20px;
+    box-shadow: var(--shadow);
+    z-index: 9999;
+    display: none;
+    animation: slideUp 0.4s ease;
+    max-width: 340px;
+}
+
+.toast.show {
+    display: block;
+}
+
+.toast .toast-title {
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 13px;
+}
+
+.toast .toast-msg {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 24px;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #000;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.2);
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: #000;
+}
+
+.btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--muted);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.btn-sm {
+    padding: 6px 16px;
+    font-size: 10px;
+}
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --primary: #00d2ff;
