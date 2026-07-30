@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>NightOrbit · Official Portfolio · Firebase Enterprise · Anas Farooq</title>
+    <title>NightOrbit · Official Portfolio · Firebase Enterprise · Anas Farooq</title>
     <meta name="description" content="Nightorbit Citadel — Official Authority, Identity, CV, and Projects of Anas Farooq. Enterprise-grade digital ecosystem with bank-level security, Firebase, OTP verification, and anti-cheat systems. 100% legitimate and Involve Asia approved." />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
@@ -12,493 +12,6 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 
     <style>
-        /* ============================================================
-           🔥 FIREBASE ENTERPRISE — NIGHTORBIT CITADEL
-           🔥 DEPLOYMENT: Google Cloud Platform (Firebase Hosting)
-           🔥 DOMAIN: https://mymarketbazar.web.app
-           🔥 STATUS: LIVE · SECURE · VERIFIED · CITADEL
-           🔥 OWNER: Anas Farooq — Nightorbit International
-           ============================================================ */
-        /* ============================================================
-   🔥 FEEDBACK SECTION — HEAVY STYLES
-   ============================================================ */
-
-/* Filter Bar */
-.filter-bar {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    padding: 15px;
-    background: var(--card);
-    border-radius: var(--radius);
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    align-items: center;
-}
-
-.filter-bar select {
-    background: var(--bg);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 60px;
-    padding: 10px 18px;
-    color: var(--text);
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s;
-    font-family: 'Inter', sans-serif;
-    min-width: 140px;
-}
-
-.filter-bar select:focus {
-    border-color: var(--primary);
-    outline: none;
-    box-shadow: 0 0 20px rgba(0, 210, 255, 0.05);
-}
-
-.filter-bar select option {
-    background: var(--bg);
-    color: var(--text);
-}
-
-.filter-bar .btn {
-    padding: 10px 24px;
-    border-radius: 60px;
-    font-weight: 600;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.3s;
-    border: none;
-    font-family: 'Inter', sans-serif;
-}
-
-.btn-primary {
-    background: var(--primary);
-    color: #000;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.2);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    color: var(--muted);
-}
-
-.btn-outline:hover {
-    border-color: var(--primary);
-    color: #fff;
-}
-
-.btn-sm {
-    padding: 6px 16px;
-    font-size: 10px;
-}
-
-.btn-gold {
-    background: var(--gold);
-    color: #000;
-    font-weight: 700;
-}
-
-.btn-gold:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
-}
-
-/* Feedback List */
-.feedback-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.feedback-item {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 16px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    transition: 0.3s;
-}
-
-.feedback-item:hover {
-    border-color: rgba(0, 210, 255, 0.08);
-    transform: translateX(4px);
-}
-
-.feedback-item .fi-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 4px;
-}
-
-.feedback-item .fi-header .fi-name {
-    font-weight: 700;
-    font-size: 14px;
-    color: #fff;
-}
-
-.feedback-item .fi-header .fi-location {
-    font-size: 10px;
-    color: var(--muted);
-}
-
-.feedback-item .fi-header .fi-stars {
-    color: var(--gold);
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-left: auto;
-}
-
-.feedback-item .fi-review {
-    font-size: 13px;
-    color: #ccc;
-    line-height: 1.7;
-    margin: 4px 0 2px;
-}
-
-.feedback-item .fi-time {
-    font-size: 9px;
-    color: var(--muted);
-    margin-top: 4px;
-}
-
-.feedback-item .fi-project-tag {
-    font-size: 8px;
-    background: rgba(0, 210, 255, 0.06);
-    padding: 2px 12px;
-    border-radius: 20px;
-    color: var(--primary);
-    border: 1px solid rgba(0, 210, 255, 0.06);
-}
-
-/* Load More Button */
-.load-more-btn {
-    text-align: center;
-    margin: 15px 0;
-}
-
-.load-more-btn button {
-    padding: 10px 30px;
-    border-radius: 60px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    color: var(--muted);
-    font-weight: 600;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-family: 'Inter', sans-serif;
-}
-
-.load-more-btn button:hover {
-    border-color: var(--primary);
-    color: #fff;
-}
-
-/* ============================================================
-   🔥 RATE & REVIEW FORM — HEAVY STYLES
-   ============================================================ */
-
-.form-group {
-    margin-bottom: 16px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 12px 16px;
-    background: var(--bg);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 12px;
-    color: var(--text);
-    font-size: 13px;
-    font-family: 'Inter', sans-serif;
-    transition: 0.3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    border-color: var(--primary);
-    outline: none;
-    box-shadow: 0 0 20px rgba(0, 210, 255, 0.05);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 80px;
-    border-radius: 12px;
-}
-
-.form-group select option {
-    background: var(--bg);
-    color: var(--text);
-}
-
-/* Star Rating */
-.star-rating-input {
-    display: flex;
-    gap: 4px;
-    font-size: 32px;
-    cursor: pointer;
-    margin: 5px 0;
-}
-
-.star-rating-input .star {
-    color: #333;
-    transition: 0.2s;
-    user-select: none;
-}
-
-.star-rating-input .star.active {
-    color: var(--gold);
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-}
-
-.star-rating-input .star:hover {
-    transform: scale(1.15);
-    color: var(--gold);
-}
-
-/* ============================================================
-   🔥 CONTACT SECTION — HEAVY STYLES
-   ============================================================ */
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-
-.contact-grid .card {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    transition: 0.3s;
-}
-
-.contact-grid .card:hover {
-    border-color: rgba(0, 210, 255, 0.08);
-}
-
-.contact-grid .card h4 {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--gold);
-    margin-bottom: 16px;
-}
-
-/* Contact Info Items */
-.ci-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
-}
-
-.ci-item .ci-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(0, 210, 255, 0.04);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    font-size: 14px;
-    flex-shrink: 0;
-}
-
-.ci-item .ci-text {
-    font-size: 13px;
-    color: var(--text);
-}
-
-/* ============================================================
-   🔥 RESPONSIVE — FIXED
-   ============================================================ */
-
-@media (max-width: 768px) {
-    .filter-bar {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .filter-bar select {
-        min-width: auto;
-    }
-
-    .filter-bar .btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .feedback-item {
-        padding: 14px 16px;
-    }
-
-    .feedback-item .fi-header {
-        flex-wrap: wrap;
-    }
-
-    .feedback-item .fi-header .fi-stars {
-        margin-left: 0;
-    }
-
-    .star-rating-input {
-        font-size: 28px;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-        font-size: 14px;
-        padding: 14px 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .feedback-item .fi-header .fi-name {
-        font-size: 13px;
-    }
-
-    .feedback-item .fi-review {
-        font-size: 12px;
-    }
-
-    .star-rating-input {
-        font-size: 24px;
-    }
-
-    .contact-grid .card {
-        padding: 18px;
-    }
-
-    .filter-bar {
-        padding: 12px;
-    }
-}
-
-/* ============================================================
-   🔥 MISC FIXES
-   ============================================================ */
-
-/* Toast message */
-.toast {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: var(--card);
-    border: 1px solid var(--gold);
-    border-radius: 12px;
-    padding: 14px 20px;
-    box-shadow: var(--shadow);
-    z-index: 9999;
-    display: none;
-    animation: slideUp 0.4s ease;
-    max-width: 340px;
-}
-
-.toast.show {
-    display: block;
-}
-
-.toast .toast-title {
-    font-weight: 700;
-    color: var(--gold);
-    font-size: 13px;
-}
-
-.toast .toast-msg {
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 2px;
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Buttons */
-.btn {
-    padding: 10px 24px;
-    border-radius: 60px;
-    font-weight: 600;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.3s;
-    border: none;
-    font-family: 'Inter', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.btn-primary {
-    background: var(--primary);
-    color: #000;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.2);
-}
-
-.btn-gold {
-    background: var(--gold);
-    color: #000;
-}
-
-.btn-gold:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    color: var(--muted);
-}
-
-.btn-outline:hover {
-    border-color: var(--primary);
-    color: #fff;
-}
-
-.btn-sm {
-    padding: 6px 16px;
-    font-size: 10px;
-}
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --primary: #00d2ff;
@@ -507,15 +20,11 @@
             --neon-green: #39ff14;
             --bg: #05070a;
             --card: #0e1219;
-            --card2: #141a24;
             --text: #e8edf5;
             --muted: #8892a8;
             --radius: 16px;
             --shadow: 0 20px 50px rgba(0,0,0,0.8);
-            --glow: 0 0 40px rgba(0,210,255,0.06);
             --firebase-orange: #ff9100;
-            --firebase-yellow: #ffc400;
-            --citadel-gold: #ffd700;
         }
         html { scroll-behavior: smooth; }
         body {
@@ -533,9 +42,6 @@
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* ============================================================
-           🔥 CITADEL BADGE — TOP OF PAGE
-           ============================================================ */
         .citadel-badge {
             background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(0,210,255,0.08));
             border: 2px solid var(--gold);
@@ -557,7 +63,6 @@
             margin-left: 4px;
         }
 
-        /* ===== NAVBAR ===== */
         .navbar {
             position: fixed;
             top: 0; left: 0; right: 0;
@@ -604,9 +109,6 @@
         .navbar .nav-links a.active { color: var(--gold); border-color: rgba(255,215,0,0.2); }
         .hamburger { display: none; font-size: 20px; color: #fff; cursor: pointer; }
 
-        /* ============================================================
-           🔥 HERO — CITADEL STYLE
-           ============================================================ */
         .hero {
             text-align: center;
             padding: 30px 0 16px;
@@ -646,9 +148,7 @@
         .badge-primary { background: var(--primary); color: #000; }
         .badge-neon { background: var(--neon); color: #fff; }
         .badge-green { background: var(--neon-green); color: #000; }
-        .badge-glass { background: rgba(255,255,255,0.04); color: #fff; border: 1px solid rgba(255,255,255,0.06); }
         .badge-firebase { background: var(--firebase-orange); color: #000; }
-        .badge-firebase-yellow { background: var(--firebase-yellow); color: #000; }
         .badge-citadel { background: var(--gold); color: #000; border: 2px solid #fff; box-shadow: 0 0 20px rgba(255,215,0,0.3); }
 
         .hero .stats {
@@ -671,9 +171,6 @@
             letter-spacing: 1px;
         }
 
-        /* ============================================================
-           🔥 TRUST BAR
-           ============================================================ */
         .trust-bar {
             display: flex;
             justify-content: center;
@@ -696,9 +193,6 @@
         .trust-bar span.green { color: var(--neon-green); }
         .trust-bar span.firebase { color: var(--firebase-orange); }
 
-        /* ============================================================
-           🔥 PAGES
-           ============================================================ */
         .page { display: none; padding-top: 65px; min-height: 100vh; }
         .page.active { display: block; animation: fadeIn 0.35s ease; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
@@ -715,20 +209,6 @@
         .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
         .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
 
-        .project-card { background: var(--card); border-radius: var(--radius); padding: 14px 16px; border: 1px solid rgba(255,255,255,0.04); transition: 0.3s; cursor: pointer; }
-        .project-card:hover { transform: translateY(-3px); border-color: rgba(0,210,255,0.12); box-shadow: var(--shadow), var(--glow); }
-        .project-card .pc-header { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
-        .project-card .pc-header .pc-icon { font-size: 24px; }
-        .project-card .pc-header h3 { font-size: 14px; font-weight: 700; }
-        .project-card .pc-desc { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
-        .project-card .pc-tags { display: flex; gap: 3px; flex-wrap: wrap; margin: 3px 0 4px; }
-        .project-card .pc-tags span { font-size: 7px; padding: 2px 8px; border-radius: 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.04); color: var(--muted); }
-        .project-card .pc-security { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; padding-top: 6px; border-top: 1px solid rgba(255,255,255,0.04); }
-        .project-card .pc-security span { font-size: 7px; padding: 2px 8px; border-radius: 20px; background: rgba(0,210,255,0.04); border: 1px solid rgba(0,210,255,0.06); color: var(--primary); }
-        .project-card .pc-rating { display: flex; align-items: center; gap: 5px; font-size: 10px; }
-        .project-card .pc-rating .stars { color: var(--gold); letter-spacing: 1px; }
-        .project-card .pc-rating .count { color: var(--muted); font-size: 9px; }
-
         .menu-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 8px; margin: 10px 0; }
         .menu-btn-card { background: var(--card); border: 1px solid rgba(255,255,255,0.04); border-radius: var(--radius); padding: 14px 10px; text-align: center; cursor: pointer; transition: 0.3s; }
         .menu-btn-card:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 0 30px rgba(255,215,0,0.04); }
@@ -736,9 +216,6 @@
         .menu-btn-card .mb-label { font-size: 9px; color: var(--muted); margin-top: 2px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
         .menu-btn-card .mb-desc { font-size: 8px; color: #555; }
 
-        /* ============================================================
-           🔥 FEEDBACK — FIXED
-           ============================================================ */
         .feedback-item { background: var(--card); border-radius: 12px; padding: 10px 14px; border: 1px solid rgba(255,255,255,0.03); margin-bottom: 6px; transition: 0.2s; }
         .feedback-item:hover { border-color: rgba(255,255,255,0.06); }
         .feedback-item .fi-header { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 2px; }
@@ -756,11 +233,6 @@
         .screenshot-item .screenshot-label { padding: 8px 12px; font-size: 11px; color: var(--muted); background: rgba(0,0,0,0.3); font-weight: 600; }
         .screenshot-item .screenshot-label b { color: var(--gold); }
         .screenshot-item .screenshot-desc { padding: 8px 12px; font-size: 10px; color: #aaa; border-top: 1px solid rgba(255,255,255,0.03); line-height: 1.7; }
-        .screenshot-item .screenshot-desc .highlight { color: var(--primary); font-weight: 600; }
-        .screenshot-item .screenshot-desc .gold-txt { color: var(--gold); font-weight: 600; }
-        .screenshot-item .screenshot-desc .neon-txt { color: var(--neon); font-weight: 600; }
-        .screenshot-item .screenshot-desc .green-txt { color: var(--neon-green); font-weight: 600; }
-        .screenshot-item .screenshot-desc .sec-badge { display: inline-block; font-size: 7px; padding: 1px 8px; border-radius: 20px; background: rgba(0,210,255,0.06); border: 1px solid rgba(0,210,255,0.06); color: var(--primary); margin: 2px 2px 2px 0; }
 
         .sec-badge { display: inline-block; font-size: 7px; padding: 1px 8px; border-radius: 20px; background: rgba(0,210,255,0.06); border: 1px solid rgba(0,210,255,0.06); color: var(--primary); margin: 1px 2px 1px 0; }
         .sec-badge.gold { border-color: rgba(255,215,0,0.12); color: var(--gold); }
@@ -769,15 +241,15 @@
         .sec-badge.firebase { border-color: rgba(255,145,0,0.12); color: var(--firebase-orange); }
         .sec-badge.citadel { border-color: rgba(255,215,0,0.15); color: var(--gold); background: rgba(255,215,0,0.05); }
 
-        .authority-box { background: linear-gradient(135deg, rgba(255,215,0,0.04), rgba(0,210,255,0.04)); border: 2px solid var(--gold); border-radius: var(--radius); padding: 20px 24px; text-align: center; margin: 14px 0; position: relative; overflow: hidden; }
-        .authority-box .ab-badge { display: inline-block; background: var(--gold); color: #000; padding: 2px 14px; border-radius: 30px; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 4px; position: relative; z-index: 1; }
-        .authority-box .ab-name { font-size: 26px; font-weight: 900; color: var(--gold); position: relative; z-index: 1; }
-        .authority-box .ab-title { font-size: 12px; color: var(--primary); position: relative; z-index: 1; letter-spacing: 1px; }
-        .authority-box .ab-org { font-size: 13px; color: #fff; position: relative; z-index: 1; font-weight: 600; }
-        .authority-box .ab-links { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 8px; position: relative; z-index: 1; }
+        .authority-box { background: linear-gradient(135deg, rgba(255,215,0,0.04), rgba(0,210,255,0.04)); border: 2px solid var(--gold); border-radius: var(--radius); padding: 20px 24px; text-align: center; margin: 14px 0; }
+        .authority-box .ab-badge { display: inline-block; background: var(--gold); color: #000; padding: 2px 14px; border-radius: 30px; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 4px; }
+        .authority-box .ab-name { font-size: 26px; font-weight: 900; color: var(--gold); }
+        .authority-box .ab-title { font-size: 12px; color: var(--primary); letter-spacing: 1px; }
+        .authority-box .ab-org { font-size: 13px; color: #fff; font-weight: 600; }
+        .authority-box .ab-links { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
         .authority-box .ab-links a { padding: 4px 12px; border-radius: 30px; font-size: 9px; font-weight: 600; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); color: var(--muted); transition: 0.3s; }
         .authority-box .ab-links a:hover { background: rgba(0,210,255,0.06); border-color: var(--primary); color: #fff; }
-        .authority-box .ab-verified { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 8px; position: relative; z-index: 1; }
+        .authority-box .ab-verified { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
         .authority-box .ab-verified span { font-size: 9px; color: var(--neon-green); }
         .authority-box .ab-verified span i { margin-right: 3px; }
 
@@ -788,8 +260,6 @@
         .involve-card .inv-body { font-size: 11px; color: var(--muted); line-height: 1.8; margin-top: 6px; }
         .involve-card .inv-body .highlight { color: var(--primary); font-weight: 600; }
         .involve-card .inv-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
-        .involve-card .inv-badges span { font-size: 8px; padding: 2px 12px; border-radius: 20px; background: rgba(0,210,255,0.04); border: 1px solid rgba(0,210,255,0.06); color: var(--primary); }
-        .involve-card .inv-badges span.gold { border-color: rgba(255,215,0,0.12); color: var(--gold); }
 
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .contact-info .ci-item { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
@@ -808,8 +278,8 @@
         .footer .footer-links a { font-size: 9px; color: var(--muted); }
         .footer .footer-links a:hover { color: var(--primary); }
 
-        .platform-card { background: var(--card); border-radius: var(--radius); padding: 14px 16px; border: 1px solid rgba(255,255,255,0.04); transition: 0.3s; cursor: pointer; position: relative; }
-        .platform-card:hover { transform: translateY(-3px); border-color: rgba(0,210,255,0.12); box-shadow: var(--shadow), var(--glow); }
+        .platform-card { background: var(--card); border-radius: var(--radius); padding: 14px 16px; border: 1px solid rgba(255,255,255,0.04); transition: 0.3s; position: relative; }
+        .platform-card:hover { transform: translateY(-3px); border-color: rgba(0,210,255,0.12); box-shadow: var(--shadow); }
         .platform-card.featured { border: 3px solid var(--gold); background: linear-gradient(135deg, rgba(255,215,0,0.05), rgba(0,210,255,0.03)); box-shadow: 0 0 40px rgba(255,215,0,0.04); }
         .platform-card .pc-icon { font-size: 28px; display: block; margin-bottom: 2px; }
         .platform-card .pc-name { font-size: 14px; font-weight: 700; color: #fff; }
@@ -826,12 +296,6 @@
         .feature-list li { padding: 2px 0; padding-left: 16px; position: relative; }
         .feature-list li::before { content: '✅'; position: absolute; left: 0; font-size: 8px; }
         .feature-list li .highlight { color: var(--primary); }
-
-        .security-mini-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 6px; margin: 8px 0; }
-        .security-mini-grid .sm-item { background: var(--card); border-radius: 10px; padding: 8px 10px; text-align: center; border: 1px solid rgba(255,255,255,0.03); }
-        .security-mini-grid .sm-item .sm-icon { font-size: 18px; }
-        .security-mini-grid .sm-item .sm-label { font-size: 8px; color: var(--muted); margin-top: 2px; }
-        .security-mini-grid .sm-item .sm-desc { font-size: 7px; color: #555; }
 
         .db-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 99999; display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(10px); }
         .db-modal.show { display: flex; }
@@ -852,6 +316,176 @@
         .db-modal-box .db-msg-item .db-msg-text { font-size: 11px; color: #ccc; margin: 2px 0; }
         .db-modal-box .db-msg-item .db-msg-time { font-size: 9px; color: #555; }
 
+        .affiliate-section {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 20px 22px;
+            border: 2px solid var(--gold);
+            margin: 14px 0;
+        }
+        .affiliate-section .title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .affiliate-section .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 8px 0;
+        }
+        .affiliate-section .grid-2 .label {
+            font-size: 10px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .affiliate-section .grid-2 .value {
+            font-size: 13px;
+            color: #fff;
+            font-weight: 600;
+        }
+        .affiliate-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 6px 0;
+        }
+        .affiliate-section ul li {
+            padding: 4px 0;
+            font-size: 12px;
+            color: var(--muted);
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+        }
+        .affiliate-section ul li .hl {
+            color: var(--gold);
+            font-weight: 700;
+        }
+        .affiliate-section ul li .hl-pink {
+            color: var(--neon);
+            font-weight: 700;
+        }
+        .note-box-gold {
+            background: rgba(255,215,0,0.04);
+            border: 1px solid rgba(255,215,0,0.08);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin: 10px 0;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        .note-box-gold strong { color: var(--gold); }
+        .note-box-red {
+            background: rgba(255,0,85,0.04);
+            border: 1px solid rgba(255,0,85,0.08);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin: 10px 0;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        .note-box-red strong { color: var(--neon); }
+        .affiliate-rating {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255,215,0,0.06);
+        }
+        .affiliate-rating .stars-display {
+            color: var(--gold);
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        .btn-visit {
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            text-decoration: none;
+            background: var(--primary);
+            color: #000;
+        }
+        .btn-visit:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0,210,255,0.2);
+        }
+        .btn-visit.gold {
+            background: var(--gold);
+            color: #000;
+        }
+        .btn-visit.gold:hover {
+            box-shadow: 0 0 20px rgba(255,215,0,0.2);
+        }
+        .btn-visit.outline {
+            background: transparent;
+            color: var(--muted);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .btn-visit.outline:hover {
+            background: rgba(255,255,255,0.04);
+            border-color: var(--primary);
+            color: #fff;
+        }
+        .btn-visit.firebase {
+            background: var(--firebase-orange);
+            color: #000;
+        }
+        .btn-visit.firebase:hover {
+            box-shadow: 0 0 20px rgba(255,145,0,0.2);
+        }
+
+        .view-details-btn {
+            margin-top: 6px;
+            background: var(--gold);
+            color: #000;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .view-details-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255,215,0,0.15);
+        }
+
+        .affiliate-home-card {
+            background: linear-gradient(135deg, rgba(255,215,0,0.05), rgba(0,210,255,0.03));
+            border: 2px solid var(--gold);
+            border-radius: var(--radius);
+            padding: 18px 22px;
+            margin: 14px 0;
+        }
+        .affiliate-home-card .title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .affiliate-home-card .sub {
+            font-size: 12px;
+            color: var(--muted);
+            margin: 4px 0;
+        }
+        .affiliate-home-card .highlight {
+            color: var(--neon-green);
+            font-weight: 700;
+        }
+
         @media (max-width: 768px) {
             .hamburger { display: block; }
             .navbar .nav-links { display: none; flex-direction: column; width: 100%; padding: 10px 0; gap: 2px; }
@@ -867,7 +501,6 @@
             .screenshots-grid { grid-template-columns: 1fr; }
             .authority-box { padding: 16px; }
             .authority-box .ab-name { font-size: 22px; }
-            .security-mini-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 480px) {
             .hero h1 { font-size: 20px; }
@@ -878,15 +511,12 @@
             .hero .badges span { font-size: 7px; padding: 2px 8px; }
             .authority-box .ab-links a { font-size: 8px; padding: 3px 8px; }
             .feature-list { grid-template-columns: 1fr; }
-            .security-mini-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ============================================================
-    🔥 CITADEL BADGE — VISIBLE ON ALL PAGES
-    ============================================================ -->
+    <!-- CITADEL BADGE -->
     <div style="text-align:center; padding-top:75px; background:var(--bg); border-bottom:1px solid rgba(255,215,0,0.06);">
         <span class="citadel-badge">
             <i class="fas fa-crown"></i> NIGHTORBIT <span class="highlight">CITADEL</span> · ANAS FAROOQ · TECHNICAL SUPREMACY
@@ -894,11 +524,11 @@
             <i class="fas fa-check-circle" style="color:var(--neon-green);margin-left:4px;"></i>
         </span>
         <span style="display:inline-block; margin-left:6px; font-size:8px; color:var(--muted);">
-            🔗 <strong style="color:var(--gold);">nightorbit.github.io/AnasFarooq-Citadel</strong>
+            🔗 <strong style="color:var(--gold);">nightorbit.github.io/NightOrbit</strong>
         </span>
     </div>
 
-    <!-- ===== NAVBAR ===== -->
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container">
             <div class="logo" onclick="navigateTo('home')">NIGHT<span>ORBIT</span></div>
@@ -906,7 +536,6 @@
             <div class="nav-links" id="navLinks">
                 <a class="active" data-page="home">Home</a>
                 <a data-page="project-info">Projects</a>
-                <a data-page="screenshots">Screenshots</a>
                 <a data-page="feedback">Feedback</a>
                 <a data-page="security">Security</a>
                 <a data-page="authority">Authority</a>
@@ -915,15 +544,13 @@
         </div>
     </nav>
 
-    <!-- ===== TOAST ===== -->
+    <!-- TOAST -->
     <div class="toast" id="toast">
         <div class="toast-title" id="toastTitle">✅ Success</div>
         <div class="toast-msg" id="toastMsg">Done!</div>
     </div>
 
-    <!-- ============================================================ -->
     <!-- ===== PAGE: HOME ===== -->
-    <!-- ============================================================ -->
     <div class="page active" id="page-home">
         <div class="container">
             <div class="hero">
@@ -940,12 +567,12 @@
                     <span class="badge-gold">⭐ LEAD ARCHITECT</span>
                     <span class="badge-primary">🔒 ENTERPRISE SECURITY</span>
                     <span class="badge-neon">🌐 10+ COUNTRIES</span>
-                    <span class="badge-green">✅ 4 PLATFORMS</span>
+                    <span class="badge-green">✅ 5 PLATFORMS</span>
                     <span class="badge-glass">🚀 GCP · FIREBASE</span>
                     <span class="badge-gold">🏛️ INVOLVE ASIA</span>
                 </div>
                 <div class="stats">
-                    <div class="stat-item"><div class="num" id="statProjects">4</div><div class="label">Platforms</div></div>
+                    <div class="stat-item"><div class="num" id="statProjects">5</div><div class="label">Platforms</div></div>
                     <div class="stat-item"><div class="num" id="statUsers">500+</div><div class="label">Active Users</div></div>
                     <div class="stat-item"><div class="num" id="statCountries">10+</div><div class="label">Countries</div></div>
                     <div class="stat-item"><div class="num" id="statFeedbacks">100+</div><div class="label">Feedbacks</div></div>
@@ -963,25 +590,47 @@
             </div>
 
             <div class="menu-grid">
-                <div class="menu-btn-card" onclick="navigateTo('project-info')">
+                <div class="menu-btn-card" onclick="window.open('https://mymarketbaazar.web.app','_blank')">
                     <span class="mb-icon">🛒</span>
                     <span class="mb-label" style="color:var(--gold);">My-Market</span>
                     <span class="mb-desc">Flagship · Involve Asia</span>
                 </div>
-                <div class="menu-btn-card" onclick="navigateTo('project-info')">
+                <div class="menu-btn-card" onclick="window.open('https://nightorbit.github.io/Ap-Logo-Generator/','_blank')">
                     <span class="mb-icon">🎨</span>
                     <span class="mb-label">Logo Generator</span>
                     <span class="mb-desc">40+ styles · 4K</span>
                 </div>
-                <div class="menu-btn-card" onclick="navigateTo('project-info')">
+                <div class="menu-btn-card" onclick="window.open('https://nightorbit.github.io/Happy-Birthday-Card-Generator/','_blank')">
                     <span class="mb-icon">🎂</span>
                     <span class="mb-label">Card Generator</span>
                     <span class="mb-desc">Dynamic · Zero Latency</span>
                 </div>
-                <div class="menu-btn-card" onclick="navigateTo('project-info')">
+                <div class="menu-btn-card" onclick="window.open('https://nightorbitaffiliatemarketing.web.app','_blank')">
+                    <span class="mb-icon">🔗</span>
+                    <span class="mb-label" style="color:var(--gold);">Affiliate</span>
+                    <span class="mb-desc">Dashboard · Earnings</span>
+                </div>
+                <div class="menu-btn-card" onclick="navigateTo('authority')">
                     <span class="mb-icon">🌙</span>
                     <span class="mb-label">Nightorbit ID</span>
                     <span class="mb-desc">Official Identity</span>
+                </div>
+            </div>
+
+            <!-- Affiliate Marketing Card on Home Page -->
+            <div class="affiliate-home-card">
+                <div class="title"><i class="fas fa-link" style="color:#ffd700;"></i> Affiliate Marketing — Lifetime Commission</div>
+                <div class="sub">
+                    <strong style="color:#ffd700;">💰 LIFETIME COMMISSION</strong><br>
+                    Once you become an affiliate, you earn <span class="highlight">lifetime commission</span> on every user you refer — for life!
+                </div>
+                <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
+                    <a href="https://nightorbitaffiliatemarketing.web.app" target="_blank" class="btn-visit gold" style="padding:8px 24px; font-size:12px;">🚀 Visit Affiliate Portal</a>
+                    <a href="https://mymarketbaazar.web.app" target="_blank" class="btn-visit firebase" style="padding:8px 24px; font-size:12px;">🛒 Visit My-Market</a>
+                    <button class="view-details-btn" onclick="navigateTo('project-info')" style="padding:6px 18px; font-size:10px;">📊 View Affiliate Details →</button>
+                </div>
+                <div style="margin-top:8px; font-size:10px; color:var(--muted);">
+                    <strong style="color:var(--gold);">📌 Prerequisite:</strong> Must be a registered Gyidi Bazar user with verified email.
                 </div>
             </div>
 
@@ -1013,7 +662,7 @@
                         property management system.
                     </p>
                     <p style="font-size:13px;color:var(--gold);font-weight:600;margin:4px 0;">
-                        🔗 https://mymarketbazar.web.app
+                        🔗 https://mymarketbaazar.web.app
                     </p>
                     <p style="font-size:9px;color:#888;">
                         This partnership validates Nightorbit's legitimacy as a <span class="gold-txt">trusted, enterprise-grade digital platform</span>.
@@ -1030,9 +679,7 @@
         </div>
     </div>
 
-    <!-- ============================================================ -->
     <!-- ===== PAGE: PROJECT INFO ===== -->
-    <!-- ============================================================ -->
     <div class="page" id="page-project-info">
         <div class="container">
             <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:4px;">
@@ -1041,7 +688,7 @@
                     <i class="fas fa-crown"></i> Citadel
                 </span>
             </div>
-            <div class="section-sub">Complete ecosystem — all projects with security details, URLs, and trust badges — <strong style="color:var(--firebase-orange);">deployed on Firebase Hosting</strong></div>
+            <div class="section-sub">Complete ecosystem — all projects with security details, URLs, screenshots, and trust badges — <strong style="color:var(--firebase-orange);">deployed on Firebase Hosting</strong></div>
 
             <div class="trust-bar" style="margin-bottom:8px;">
                 <span class="firebase"><i class="fas fa-fire"></i> Firebase Hosting</span>
@@ -1051,6 +698,7 @@
                 <span class="gold"><i class="fas fa-star"></i> 100% Legitimate</span>
             </div>
 
+            <!-- PROJECT 1: My-Market -->
             <div class="platform-card featured" style="margin-bottom:10px;">
                 <span class="pc-badge">⭐ FLAGSHIP</span>
                 <span class="pc-badge involve" style="right:80px;">🏛️ INVOLVE ASIA</span>
@@ -1058,7 +706,7 @@
                 <span class="pc-badge citadel-badge-card" style="right:240px;">🏛️ CITADEL</span>
                 <div class="pc-icon">🛒</div>
                 <div class="pc-name">My-Market (Gyidi Bazar & Cinema)</div>
-                <div class="pc-url">https://mymarketbazar.web.app</div>
+                <div class="pc-url">https://mymarketbaazar.web.app</div>
                 <div class="pc-desc">
                     <strong style="color:#fff;">The flagship digital earning and entertainment platform.</strong> 
                     Combines e-commerce, food delivery, digital tools, and cinema entertainment into one seamless ecosystem. 
@@ -1068,8 +716,6 @@
                     <strong style="color:var(--neon-green);">Officially approved by Involve Asia.</strong>
                     <br><br>
                     <strong style="color:var(--firebase-orange);">🔥 DEPLOYED ON FIREBASE HOSTING — GOOGLE CLOUD PLATFORM</strong>
-                    <br>
-                    <span style="color:var(--neon);font-size:9px;">❌ GitHub Pages DISABLED · Now on Enterprise Firebase</span>
                 </div>
                 <div class="pc-tags">
                     <span>React.js</span><span>Firebase</span><span>E-Commerce</span><span>Earning</span><span>Entertainment</span>
@@ -1088,88 +734,460 @@
                     <li><span class="highlight">📊 Zero Data Sharing</span> — Never sold or shared</li>
                     <li><span class="highlight">🏛️ Involve Asia</span> — Officially approved partner</li>
                     <li><span class="highlight">📱 PWA Ready</span> — Installable app experience</li>
-                    <li><span class="highlight" style="color:var(--firebase-orange);">🔥 Firebase Hosting</span> — Google Cloud Platform · Enterprise-grade</li>
-                    <li><span class="highlight" style="color:var(--gold);">🏛️ Nightorbit Citadel</span> — Anas Farooq · Technical Supremacy</li>
                 </ul>
                 <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;">
-                    <a href="https://mymarketbazar.web.app" target="_blank" class="btn btn-gold">🚀 Visit Platform (Firebase)</a>
+                    <a href="https://mymarketbaazar.web.app" target="_blank" class="btn-visit gold">🚀 Visit Platform (Firebase)</a>
                     <span style="font-size:7px;color:#555;display:flex;align-items:center;">⭐ 4.6 ★ (85+ reviews)</span>
                 </div>
-                <div style="margin-top:4px;font-size:7px;color:#444;border-top:1px solid rgba(255,215,0,0.06);padding-top:4px;">
-                    🔐 <strong style="color:var(--gold);">This platform is 100% legitimate, secured with bank-level encryption, and officially approved by Involve Asia.</strong>
-                    <br>
-                    <span style="color:var(--firebase-orange);">🔥 Deployed on Firebase Hosting — No GitHub Pages</span>
+                <div style="margin-top:8px;">
+                    <button class="view-details-btn" onclick="toggleProjectDetails('my-market')">📸 View Screenshots & Details →</button>
+                </div>
+                <div id="my-market-details" style="display:none; margin-top:10px; border-top:1px solid rgba(255,255,255,0.04); padding-top:10px;">
+                    <div class="screenshots-grid">
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-02 191036.jpg" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🚪 Entry Portal — Secure Gateway</div>
+                            <div class="screenshot-desc">Entry point with PWA install &amp; Direct Web Use options.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-02 191240.jpg" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔑 Login Screen — Multi-Layer Auth</div>
+                            <div class="screenshot-desc">Google Connect (OAuth 2.0) + Email/Password. Password visibility toggle.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-02 191312.jpg" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📝 Register Screen — Identity Creation</div>
+                            <div class="screenshot-desc">Username, Gmail, Password with 8+2 rule validation.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-02 191406.jpg" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🆘 Help Center — Direct Support</div>
+                            <div class="screenshot-desc">Submit support requests directly to owner. Real-time status checking.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-02 191602.jpg" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔐 Password Validation — 8+2 Rule</div>
+                            <div class="screenshot-desc">Minimum 10 characters, 8 letters + 2 digits.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-02 191657.jpg" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔄 Passwords Match — Error Prevention</div>
+                            <div class="screenshot-desc">Real-time validation catches typing errors before submission.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-02 191740.jpg" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">👤 Username Validation — Anti-Bot</div>
+                            <div class="screenshot-desc">Username must be at least 6 characters.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-02 191821.jpg" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🧠 Human Verification — CAPTCHA</div>
+                            <div class="screenshot-desc">Math challenge to prevent bots.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-02 191900.jpg" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔐 OTP Verification — MFA</div>
+                            <div class="screenshot-desc">6-digit OTP, valid for 5 minutes with rate limiting.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-02 192225.jpg" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🏠 Dashboard — Real-Time</div>
+                            <div class="screenshot-desc">COINS balance, tabs (Cinema, All Platforms, PK, MY).</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-03 023755.jpg" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🏛️ Involve Asia — Official Approval</div>
+                            <div class="screenshot-desc">Property Management Dashboard showing APPROVED status. Date Added: 25 March 2026.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="grid-3">
-                <div class="platform-card">
-                    <span class="pc-badge vip">🎨 DESIGN</span>
-                    <div class="pc-icon">🎨</div>
-                    <div class="pc-name">Ap-Logo-Generator</div>
-                    <div class="pc-url">https://nightorbit.github.io/Ap-Logo-Generator/</div>
-                    <div class="pc-desc">
-                        <strong style="color:#fff;">Custom logo generator</strong> with real-time preview, 
-                        <strong style="color:var(--gold);">40+ unique styles</strong> (3D, Neon Glow, Gradient, Metallic, Chrome, Gold, and more), 
-                        and export functionality. Built with pure JavaScript and Canvas API, optimized for performance with 
-                        <strong style="color:var(--primary);">zero-latency rendering</strong>. Export your logo as PNG or SVG.
-                        <span style="color:var(--neon-green);">All processing is client-side — no data leaves your device.</span>
+            <!-- PROJECT 2: Logo Generator -->
+            <div class="platform-card">
+                <span class="pc-badge vip" style="background:#00d2ff;color:#000;">🎨 DESIGN</span>
+                <div class="pc-icon">🎨</div>
+                <div class="pc-name">Ap-Logo-Generator</div>
+                <div class="pc-url">https://nightorbit.github.io/Ap-Logo-Generator/</div>
+                <div class="pc-desc">
+                    <strong style="color:#fff;">Custom logo generator</strong> with real-time preview, 
+                    <strong style="color:var(--gold);">40+ unique styles</strong> (3D, Neon Glow, Gradient, Metallic, Chrome, Gold, and more), 
+                    and export functionality. Built with pure JavaScript and Canvas API, optimized for performance with 
+                    <strong style="color:var(--primary);">zero-latency rendering</strong>. Export your logo as PNG or SVG.
+                    <span style="color:var(--neon-green);">All processing is client-side — no data leaves your device.</span>
+                </div>
+                <div class="pc-tags">
+                    <span>JavaScript</span><span>Canvas</span><span>Design</span>
+                    <span class="sec-badge gold">🔒 Client-Side</span>
+                    <span class="sec-badge green">🧹 XSS Protected</span>
+                </div>
+                <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;">
+                    <a href="https://nightorbit.github.io/Ap-Logo-Generator/" target="_blank" class="btn-visit">🚀 Visit</a>
+                    <button class="view-details-btn" onclick="toggleProjectDetails('logo-generator')">📸 View Details →</button>
+                    <span style="font-size:7px;color:#555;display:flex;align-items:center;">⭐ 4.6 ★ (28+ reviews)</span>
+                </div>
+                <div id="logo-generator-details" style="display:none; margin-top:10px; border-top:1px solid rgba(255,255,255,0.04); padding-top:10px;">
+                    <div class="screenshots-grid">
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 073717.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🎨 Professional Logo Studio</div>
+                            <div class="screenshot-desc">3500+ Lines, 40+ Styles, 4K Quality. Letters, Font controls, Save/Load.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 073739.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🎨 Logo Studio — Styles & Colors</div>
+                            <div class="screenshot-desc">NEON GLOW, GRADIENT, SHADOW, EMBOSS, METALLIC, GOLD, COPPER, BRONZE.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 073815.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🎨 Logo Studio — Icons & Effects</div>
+                            <div class="screenshot-desc">TEXT, COLORS, LINES, ICONS, EFFECTS with Icon Size 60px.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 074135.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🎨 Logo Studio — Previews</div>
+                            <div class="screenshot-desc">Multiple LIVE PREVIEW - 4K READY with NIGHTORBIT and GYIDI BAZAR.</div>
+                        </div>
                     </div>
-                    <div class="pc-tags">
-                        <span>JavaScript</span><span>Canvas</span><span>Design</span>
-                        <span class="sec-badge gold">🔒 Client-Side</span>
-                        <span class="sec-badge green">🧹 XSS Protected</span>
+                </div>
+            </div>
+
+            <!-- PROJECT 3: Birthday Card Generator -->
+            <div class="platform-card">
+                <span class="pc-badge vip" style="background:#ffd700;color:#000;">🎂 DYNAMIC</span>
+                <div class="pc-icon">🎂</div>
+                <div class="pc-name">Happy-Birthday-Card-Generator</div>
+                <div class="pc-url">https://nightorbit.github.io/Happy-Birthday-Card-Generator/</div>
+                <div class="pc-desc">
+                    <strong style="color:#fff;">Dynamic birthday card generator</strong> with 
+                    <strong style="color:var(--gold);">zero-latency rendering</strong> and custom text transformation. 
+                    Uses complex text transformation modules and asynchronous layout render states to build unique assets 
+                    instantly with <strong style="color:var(--primary);">zero server latency</strong>. 
+                    Perfect for creating personalized birthday wishes with custom text, colors, and styles.
+                    <span style="color:var(--neon-green);">All processing is client-side — no data stored.</span>
+                </div>
+                <div class="pc-tags">
+                    <span>JavaScript</span><span>DOM</span><span>Dynamic Content</span>
+                    <span class="sec-badge gold">🔒 Client-Side</span>
+                    <span class="sec-badge green">🚀 Zero Latency</span>
+                </div>
+                <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;">
+                    <a href="https://nightorbit.github.io/Happy-Birthday-Card-Generator/" target="_blank" class="btn-visit gold">🚀 Visit</a>
+                    <button class="view-details-btn" onclick="toggleProjectDetails('birthday-card')">📸 View Details →</button>
+                    <span style="font-size:7px;color:#555;display:flex;align-items:center;">⭐ 4.8 ★ (34+ reviews)</span>
+                </div>
+                <div id="birthday-card-details" style="display:none; margin-top:10px; border-top:1px solid rgba(255,255,255,0.04); padding-top:10px;">
+                    <div class="screenshots-grid">
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 073054.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔐 Login Page — Access Code</div>
+                            <div class="screenshot-desc">Google Login + Access Code entry with Unlock Creator button.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 073353.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🎂 Birthday Card Generator — Input</div>
+                            <div class="screenshot-desc">Friend's Name, Relation, Date, Message, Girl/Boy Style, Generate 30 Cards.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 073432.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📅 Date Picker — Admin View</div>
+                            <div class="screenshot-desc">Anas · Admin · September 2026 with year/month navigation.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 073500.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🎂 Birthday Cards — Preview Grid</div>
+                            <div class="screenshot-desc">Multiple Happy Birthday cards with Admin, Anas, dates, style toggles.</div>
+                        </div>
                     </div>
-                    <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;">
-                        <a href="https://nightorbit.github.io/Ap-Logo-Generator/" target="_blank" class="btn btn-primary btn-sm">🚀 Visit</a>
-                        <span style="font-size:7px;color:#555;display:flex;align-items:center;">⭐ 4.6 ★ (28+ reviews)</span>
+                </div>
+            </div>
+
+            <!-- ===== PROJECT 4: AFFILIATE DASHBOARD (FIXED - WITH VIEW DETAILS BUTTON) ===== -->
+            <div class="platform-card">
+                <span class="pc-badge" style="background:var(--gold);color:#000;">🔗 AFFILIATE</span>
+                <div class="pc-icon">💰</div>
+                <div class="pc-name">Affiliate Dashboard</div>
+                <div class="pc-url">https://nightorbitaffiliatemarketing.web.app</div>
+                <div class="pc-desc">
+                    <strong style="color:#fff;">Complete affiliate marketing dashboard</strong> for Nightorbit's ecosystem.
+                    Manage your affiliate links, track <strong style="color:var(--gold);">lifetime commissions</strong>, 
+                    view earnings, and access payment details. <strong style="color:var(--neon-green);">Approved affiliates</strong> 
+                    earn lifetime commission on every referred user. Features include referral tracking, payment history, 
+                    and real-time earnings updates.
+                    <span style="color:var(--primary);">Fully integrated with Involve Asia's affiliate program.</span>
+                </div>
+                <div class="pc-tags">
+                    <span>Affiliate</span><span>Commission</span><span>Tracking</span>
+                    <span class="sec-badge gold">💰 Lifetime</span>
+                    <span class="sec-badge green">✅ Approved</span>
+                    <span class="sec-badge firebase">🔥 Firebase</span>
+                </div>
+                <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;">
+                    <a href="https://nightorbitaffiliatemarketing.web.app" target="_blank" class="btn-visit gold">🚀 Visit Dashboard</a>
+                    <button class="view-details-btn" onclick="toggleProjectDetails('affiliate-dashboard')">📸 View Details →</button>
+                    <span style="font-size:7px;color:#555;display:flex;align-items:center;">⭐ 4.8 ★ (12+ reviews)</span>
+                </div>
+                <div id="affiliate-dashboard-details" style="display:none; margin-top:10px; border-top:1px solid rgba(255,215,0,0.08); padding-top:10px;">
+                    <div class="screenshots-grid">
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 043553.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔑 Affiliate Login</div>
+                            <div class="screenshot-desc">Login with Gyidi Bazar email · nightorbit.official@gmail.com</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 043744.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📝 Submit New Request</div>
+                            <div class="screenshot-desc">Username, Email, Platforms (YouTube, TikTok, Instagram), Website URL, Message.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 043801.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📝 Request Form — Continue</div>
+                            <div class="screenshot-desc">Instagram username, Website URL (optional), Message with 94/100 chars.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 044250.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">✅ Request Submitted</div>
+                            <div class="screenshot-desc">Thank You! Processing time 24 hours to 2-3 working days.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 062307.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💰 Affiliate Dashboard — Earnings</div>
+                            <div class="screenshot-desc">PKR Rs. 10,000,000.00 Total Lifetime Commission · 1 Referral.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 041904.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔑 Affiliate Login Page</div>
+                            <div class="screenshot-desc">Email and Password fields · Only Gyidi Bazar registered emails allowed.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042254.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📊 Affiliate Dashboard — Waiting</div>
+                            <div class="screenshot-desc">Search dashboard · PKR Rs. 10,000,000.00 · Payment method required.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042346.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📋 Affiliate Menu</div>
+                            <div class="screenshot-desc">REQUEST, PAYMENT DETAILS & HISTORY, REQUEST SUBMIT / HISTORY, PROFILE, LINKS, HELP CENTER, LOGOUT.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042505.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💳 Payment Details</div>
+                            <div class="screenshot-desc">No payment details saved yet. Add your payment information.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042522.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💳 Payment Details Form</div>
+                            <div class="screenshot-desc">Payment Method, Country, City, Full Address — Double-check all information.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042558.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💳 Payment Form — Save</div>
+                            <div class="screenshot-desc">SAVE PAYMENT DETAILS · CANCEL · Important: Double-check all info.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042627.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔗 My Affiliate Links</div>
+                            <div class="screenshot-desc">LOCKED — You need to be an approved affiliate to get links. GO TO REQUESTS.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 062414.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔗 Approved Affiliate — Links</div>
+                            <div class="screenshot-desc">Your Unique Affiliate Link: https://mymarketbaazar.web.app/?ref=qkpyuqwfb7ba</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 5: Nightorbit Citadel -->
+            <div class="platform-card">
+                <span class="pc-badge" style="background:var(--primary);color:#000;">🌙 IDENTITY</span>
+                <div class="pc-icon">🌙</div>
+                <div class="pc-name">Nightorbit Citadel</div>
+                <div class="pc-url">https://nightorbit.github.io/NightOrbit/</div>
+                <div class="pc-desc">
+                    <strong style="color:#fff;">Official Identity and Authority Page</strong> for Nightorbit International. 
+                    This page serves as the <strong style="color:var(--gold);">digital authority</strong> for the entire ecosystem. 
+                    Here, users and partners can <strong style="color:var(--primary);">verify ownership</strong>, 
+                    explore all projects, view security details, and access the official Involve Asia partnership confirmation. 
+                    <span style="color:var(--neon-green);">The single source of truth for Nightorbit's legitimacy.</span>
+                </div>
+                <div class="pc-tags">
+                    <span>Official</span><span>Authority</span><span>Identity</span>
+                    <span class="sec-badge gold">🏛️ Verified</span>
+                    <span class="sec-badge green">⭐ Trusted</span>
+                    <span class="sec-badge citadel">🏛️ Citadel</span>
+                </div>
+                <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;">
+                    <a href="https://nightorbit.github.io/NightOrbit/" target="_blank" class="btn-visit firebase">🚀 Visit</a>
+                    <button class="view-details-btn" onclick="toggleProjectDetails('citadel')">📸 View Details →</button>
+                </div>
+                <div id="citadel-details" style="display:none; margin-top:10px; border-top:1px solid rgba(255,255,255,0.04); padding-top:10px;">
+                    <div class="screenshots-grid">
+                        <div class="screenshot-item" style="grid-column:span 2; text-align:center; padding:20px; color:var(--muted);">
+                            <i class="fas fa-image" style="font-size:48px; opacity:0.2;"></i>
+                            <p style="margin-top:10px;">This page is the Citadel! You are viewing it right now.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AFFILIATE SECTION (Full Details) -->
+            <div class="affiliate-section">
+                <div class="title"><i class="fas fa-link" style="color:#ffd700;"></i> Affiliate Marketing — Lifetime Commission</div>
+
+                <div style="border-left: 4px solid #ffd700; padding: 10px 14px; margin-bottom: 12px; background: rgba(255,215,0,0.02);">
+                    <p style="font-size: 13px; color: #ccc; margin: 0;">
+                        <strong style="color: #ffd700;">💰 LIFETIME COMMISSION</strong><br>
+                        Once you become an affiliate, you earn <strong style="color: #39ff14;">lifetime commission</strong> on every user you refer — for life!
+                    </p>
+                </div>
+
+                <div style="background: rgba(255, 215, 0, 0.04); border: 2px solid #ffd700; border-radius: 10px; padding: 12px 16px; margin-bottom: 12px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-circle-exclamation" style="color: #ffd700; font-size: 20px;"></i>
+                        <div>
+                            <div style="font-weight: 700; color: #ffd700; font-size: 13px;">📌 AFFILIATE PREREQUISITE</div>
+                            <div style="font-size: 12px; color: #cbd5e1;">
+                                To become an affiliate, you must <strong style="color: #ffd700;">first be a registered user</strong> in the 
+                                <strong style="color: #fff;">Gyidi Bazar app</strong> with a verified email address. 
+                                Your email must already exist in our system before you can apply for affiliate status.
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="platform-card">
-                    <span class="pc-badge vip">🎂 DYNAMIC</span>
-                    <div class="pc-icon">🎂</div>
-                    <div class="pc-name">Happy-Birthday-Card-Generator</div>
-                    <div class="pc-url">https://nightorbit.github.io/Happy-Birthday-Card-Generator/</div>
-                    <div class="pc-desc">
-                        <strong style="color:#fff;">Dynamic birthday card generator</strong> with 
-                        <strong style="color:var(--gold);">zero-latency rendering</strong> and custom text transformation. 
-                        Uses complex text transformation modules and asynchronous layout render states to build unique assets 
-                        instantly with <strong style="color:var(--primary);">zero server latency</strong>. 
-                        Perfect for creating personalized birthday wishes with custom text, colors, and styles.
-                        <span style="color:var(--neon-green);">All processing is client-side — no data stored.</span>
-                    </div>
-                    <div class="pc-tags">
-                        <span>JavaScript</span><span>DOM</span><span>Dynamic Content</span>
-                        <span class="sec-badge gold">🔒 Client-Side</span>
-                        <span class="sec-badge green">🚀 Zero Latency</span>
-                    </div>
-                    <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;">
-                        <a href="https://nightorbit.github.io/Happy-Birthday-Card-Generator/" target="_blank" class="btn btn-primary btn-sm">🚀 Visit</a>
-                        <span style="font-size:7px;color:#555;display:flex;align-items:center;">⭐ 4.8 ★ (34+ reviews)</span>
+                <div class="grid-2">
+                    <div><span class="label">🔑 Affiliate Status</span><br><span class="value">Must be approved affiliate</span></div>
+                    <div><span class="label">📧 Prerequisite</span><br><span class="value">Must be a registered Gyidi Bazar user</span></div>
+                    <div><span class="label">🔄 Commission Type</span><br><span class="value">Lifetime · Recurring</span></div>
+                    <div><span class="label">📊 Commission Rate</span><br><span class="value">Per sale / action (varies by offer)</span></div>
+                    <div><span class="label">👥 Referral Tracking</span><br><span class="value">Auto-tracked via unique link</span></div>
+                    <div style="grid-column:span 2;"><span class="label">🔗 Link Types</span><br><span class="value">Affiliate Link · Referral Link (both tracked under affiliate ID)</span></div>
+                    <div style="grid-column:span 2;"><span class="label">⏳ Commission Validity</span><br><span class="value">Lifetime — as long as the referred user remains active</span></div>
+                </div>
+
+                <div style="margin-top: 8px;">
+                    <div style="font-weight: 600; color: #ffd700; font-size: 13px; margin-bottom: 4px;">📋 How It Works</div>
+                    <ul>
+                        <li><span class="hl">Step 1:</span> <strong style="color:#fff;">Register</strong> in the Gyidi Bazar app with your email address.</li>
+                        <li><span class="hl">Step 2:</span> Apply for <strong style="color:#ffd700;">affiliate status</strong> via the Affiliate Portal.</li>
+                        <li><span class="hl">Step 3:</span> Once approved, you receive a <strong style="color:#ffd700;">unique affiliate link</strong>.</li>
+                        <li><span class="hl">Step 4:</span> Any new user who registers via your link is <strong style="color:#ffd700;">permanently linked</strong> to you.</li>
+                        <li><span class="hl">Step 5:</span> You earn <strong style="color:#39ff14;">lifetime commission</strong> on every action/purchase by that referred user.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 8px;">
+                    <div style="font-weight: 600; color: #ffd700; font-size: 13px; margin-bottom: 4px;">⚠️ Important Rules</div>
+                    <ul>
+                        <li><span class="hl-pink">✅</span> Only <strong style="color:#ffd700;">approved affiliates</strong> earn commission.</li>
+                        <li><span class="hl-pink">✅</span> Non-affiliates <strong style="color:#ff0055;">do not</strong> earn commission on referrals.</li>
+                        <li><span class="hl-pink">✅</span> <strong style="color:#39ff14;">Lifetime commission</strong> — once linked, always linked.</li>
+                        <li><span class="hl-pink">✅</span> Commission is credited <strong style="color:#ffd700;">automatically</strong> to the affiliate's wallet.</li>
+                        <li><span class="hl-pink">⚠️</span> <strong style="color:#ff0055;">Policy Violation:</strong> Affiliate link may be <strong style="color:#ff0055;">banned permanently</strong>.</li>
+                        <li><span class="hl-pink">⚠️</span> If an affiliate violates privacy or policy, <strong style="color:#ff0055;">all commissions are forfeited</strong> and account is banned.</li>
+                    </ul>
+                </div>
+
+                <div class="note-box-gold">
+                    <strong>🔗 Affiliate Portal:</strong> <span style="color:#ffd700;">nightorbitaffiliatemarketing.web.app</span><br>
+                    Manage your links, track commissions, and view analytics.
+                </div>
+
+                <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+                    <a href="https://nightorbitaffiliatemarketing.web.app" target="_blank" class="btn-visit gold" style="padding:8px 24px;font-size:12px;">🚀 Visit Affiliate Portal</a>
+                    <a href="https://mymarketbaazar.web.app" target="_blank" class="btn-visit firebase" style="padding:8px 24px;font-size:12px;">🛒 Visit My-Market</a>
+                </div>
+                     <!-- Affiliate Screenshots -->
+                <div style="margin-top:12px;">
+                    <button class="view-details-btn" onclick="toggleProjectDetails('affiliate-screenshots')">📸 View Affiliate Screenshots →</button>
+                </div>
+                <div id="affiliate-screenshots-details" style="display:none; margin-top:10px; border-top:1px solid rgba(255,215,0,0.08); padding-top:10px;">
+                    <div class="screenshots-grid">
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 043553.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔑 Affiliate Login</div>
+                            <div class="screenshot-desc">Login with Gyidi Bazar email · nightorbit.official@gmail.com</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 043744.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📝 Submit New Request</div>
+                            <div class="screenshot-desc">Username, Email, Platforms (YouTube, TikTok, Instagram), Website URL, Message.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 043801.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📝 Request Form — Continue</div>
+                            <div class="screenshot-desc">Instagram username, Website URL (optional), Message with 94/100 chars.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 044250.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">✅ Request Submitted</div>
+                            <div class="screenshot-desc">Thank You! Processing time 24 hours to 2-3 working days.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 062307.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💰 Affiliate Dashboard — Earnings</div>
+                            <div class="screenshot-desc">PKR Rs. 10,000,000.00 Total Lifetime Commission · 1 Referral.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 041904.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔑 Affiliate Login Page</div>
+                            <div class="screenshot-desc">Email and Password fields · Only Gyidi Bazar registered emails allowed.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042254.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📊 Affiliate Dashboard — Waiting</div>
+                            <div class="screenshot-desc">Search dashboard · PKR Rs. 10,000,000.00 · Payment method required.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042346.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📋 Affiliate Menu</div>
+                            <div class="screenshot-desc">REQUEST, PAYMENT DETAILS & HISTORY, REQUEST SUBMIT / HISTORY, PROFILE, LINKS, HELP CENTER, LOGOUT.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042505.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💳 Payment Details</div>
+                            <div class="screenshot-desc">No payment details saved yet. Add your payment information.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042522.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💳 Payment Details Form</div>
+                            <div class="screenshot-desc">Payment Method, Country, City, Full Address — Double-check all information.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042558.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💳 Payment Form — Save</div>
+                            <div class="screenshot-desc">SAVE PAYMENT DETAILS · CANCEL · Important: Double-check all info.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042627.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔗 My Affiliate Links</div>
+                            <div class="screenshot-desc">LOCKED — You need to be an approved affiliate to get links. GO TO REQUESTS.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 062414.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔗 Approved Affiliate — Links</div>
+                            <div class="screenshot-desc">Your Unique Affiliate Link: https://mymarketbaazar.web.app/?ref=qkpyuqwfb7ba</div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="platform-card">
-                    <span class="pc-badge" style="background:var(--primary);color:#000;">🌙 IDENTITY</span>
-                    <div class="pc-icon">🌙</div>
-                    <div class="pc-name">Nightorbit Citadel</div>
-                    <div class="pc-url">https://nightorbit.github.io/AnasFarooq-Citadel/</div>
-                    <div class="pc-desc">
-                        <strong style="color:#fff;">Official Identity and Authority Page</strong> for Nightorbit International. 
-                        This page serves as the <strong style="color:var(--gold);">digital authority</strong> for the entire ecosystem. 
-                        Here, users and partners can <strong style="color:var(--primary);">verify ownership</strong>, 
-                        explore all projects, view security details, and access the official Involve Asia partnership confirmation. 
-                        <span style="color:var(--neon-green);">The single source of truth for Nightorbit's legitimacy.</span>
+                <div class="note-box-red" style="margin-top:12px;">
+                    <strong>🚫 ZERO TOLERANCE POLICY</strong><br>
+                    Nightorbit has a <strong style="color:#ff0055;">strict zero-tolerance policy</strong> against privacy violations, spam, or unethical marketing.<br>
+                    Any violation results in <strong style="color:#ff0055;">permanent ban</strong> and <strong style="color:#ff0055;">legal action</strong> if necessary.
+                </div>
+
+                <div class="affiliate-rating">
+                    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+                        <span style="font-size:13px; color:#fff; font-weight:600;">⭐ Rate Affiliate Dashboard</span>
+                        <div class="stars-display" id="affiliateStars">★★★★★</div>
+                        <span style="font-size:11px; color:var(--muted);">(4.8 ★ · 12 reviews)</span>
                     </div>
-                    <div class="pc-tags">
-                        <span>Official</span><span>Authority</span><span>Identity</span>
-                        <span class="sec-badge gold">🏛️ Verified</span>
-                        <span class="sec-badge green">⭐ Trusted</span>
-                        <span class="sec-badge citadel">🏛️ Citadel</span>
-                    </div>
-                    <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;">
-                        <a href="https://nightorbit.github.io/AnasFarooq-Citadel/" target="_blank" class="btn btn-primary btn-sm">🚀 Visit</a>
+                    <div style="margin-top:6px; display:flex; gap:6px; flex-wrap:wrap;">
+                        <span style="font-size:8px; padding:2px 10px; border-radius:20px; background:rgba(57,255,20,0.06); border:1px solid rgba(57,255,20,0.12); color:var(--neon-green);">✅ "I got my withdrawal!"</span>
+                        <span style="font-size:8px; padding:2px 10px; border-radius:20px; background:rgba(0,210,255,0.06); border:1px solid rgba(0,210,255,0.12); color:var(--primary);">🌟 "Great platform!"</span>
+                        <span style="font-size:8px; padding:2px 10px; border-radius:20px; background:rgba(255,215,0,0.06); border:1px solid rgba(255,215,0,0.12); color:var(--gold);">💳 "Withdrawal worked!"</span>
                     </div>
                 </div>
             </div>
@@ -1203,148 +1221,7 @@
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- ===== PAGE: SCREENSHOTS ===== -->
-    <!-- ============================================================ -->
-    <div class="page" id="page-screenshots">
-        <div class="container">
-            <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:4px;">
-                <div class="section-title">📸 Gyidi Bazar &amp; Cinema — <span class="gold">Full Walkthrough</span></div>
-                <span class="citadel-badge" style="font-size:7px; padding:2px 12px; margin:0;">
-                    <i class="fas fa-crown"></i> Citadel
-                </span>
-            </div>
-            <div class="section-sub">Every screen explained with enterprise-grade security details — all data encrypted and stored in Firebase with bank-level encryption</div>
-
-            <div class="security-mini-grid">
-                <div class="sm-item"><div class="sm-icon">🔐</div><div class="sm-label">OTP Verified</div><div class="sm-desc">6/5/4 digit codes</div></div>
-                <div class="sm-item"><div class="sm-icon">🛡️</div><div class="sm-label">Anti-Cheat</div><div class="sm-desc">Real-time detection</div></div>
-                <div class="sm-item"><div class="sm-icon">🧠</div><div class="sm-label">Human Verify</div><div class="sm-desc">Math CAPTCHA</div></div>
-                <div class="sm-item"><div class="sm-icon">🚫</div><div class="sm-label">Rate Limit</div><div class="sm-desc">5 fails = 30min lock</div></div>
-            </div>
-
-            <div class="screenshots-grid" id="screenshotsGrid"></div>
-
-            <div class="involve-card" style="border: 3px solid var(--gold); background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(0,210,255,0.06));">
-                <div class="inv-header">
-                    <span class="inv-icon">🏛️</span>
-                    <span class="inv-title">Involve Asia — Official Property Approval</span>
-                    <span style="margin-left:auto;font-size:8px;padding:4px 16px;border-radius:30px;background:var(--gold);color:#000;font-weight:800;letter-spacing:1px;border:2px solid #fff;box-shadow:0 0 30px rgba(255,215,0,0.3);">⭐ VERIFIED</span>
-                </div>
-
-                <div class="inv-screenshot" style="margin:12px 0; border-radius:12px; overflow:hidden; border:2px solid rgba(255,215,0,0.15); box-shadow:0 0 40px rgba(255,215,0,0.05);">
-                    <img src="Screenshot 2026-07-03 023755.jpg" alt="Involve Asia Official Approval Dashboard" loading="lazy" style="width:100%;height:auto;display:block;" />
-                    <div class="ss-label" style="padding:8px 14px; background:rgba(0,0,0,0.85); font-size:10px; color:var(--muted); border-top:1px solid rgba(255,215,0,0.08);">
-                        <b style="color:var(--gold);">📸 Involve Asia Property Management Dashboard</b> — <span style="color:#fff;font-weight:700;">Nightorbit (My-Market)</span> · <span style="color:var(--neon-green);font-weight:700;">✅ APPROVED</span> · Date Added: <span style="color:var(--gold);font-weight:700;">25 March 2026</span>
-                        <br>
-                        <span style="color:var(--firebase-orange);font-weight:700;">🔥 DEPLOYED ON FIREBASE HOSTING — GOOGLE CLOUD PLATFORM</span>
-                    </div>
-                </div>
-
-                <div class="inv-body" style="margin-top:8px;">
-                    <p style="font-size:14px; color:#fff; font-weight:700; line-height:1.9;">
-                        🏛️ INVOLVE ASIA — OFFICIAL APPROVAL &amp; VERIFICATION
-                    </p>
-                    <p style="font-size:12px; color:var(--muted); line-height:1.9;">
-                        This official screenshot from the <strong style="color:var(--gold);">Involve Asia Property Management Dashboard</strong> 
-                        confirms that <strong style="color:#fff;">Nightorbit (My-Market)</strong> is an <span style="color:var(--neon-green);font-weight:700;">✅ APPROVED</span> property on their platform.
-                    </p>
-
-                    <div style="background:rgba(255,215,0,0.04); border:1px solid rgba(255,215,0,0.08); border-radius:10px; padding:12px 14px; margin:8px 0;">
-                        <p style="font-size:11px; color:var(--muted); line-height:1.9; margin:0;">
-                            <strong style="color:var(--gold);">🔐 VERIFICATION DETAILS — OFFICIAL RECORD:</strong><br>
-                            • <strong style="color:#fff;">Property Name:</strong> Nightorbit<br>
-                            • <strong style="color:#fff;">Domain:</strong> <span style="color:var(--primary);font-weight:600;">https://mymarketbazar.web.app</span> <span style="color:var(--firebase-orange);font-weight:600;">(Firebase Hosting)</span><br>
-                            • <strong style="color:#fff;">Status:</strong> <span style="color:var(--neon-green);font-weight:700;">✅ APPROVED</span><br>
-                            • <strong style="color:#fff;">Categories:</strong> Fashion · Beauty · Food<br>
-                            • <strong style="color:#fff;">Date Added:</strong> 25 March 2026<br>
-                            • <strong style="color:#fff;">Account Manager:</strong> Customer Service<br>
-                            • <strong style="color:#fff;">Property Type:</strong> Web/App/Software<br>
-                            • <strong style="color:#fff;">Listing Status:</strong> <span style="color:var(--neon-green);font-weight:700;">ACTIVE</span>
-                        </p>
-                    </div>
-
-                    <p style="font-size:12px; color:var(--muted); line-height:1.9; margin-top:6px;">
-                        <strong style="color:var(--neon-green);font-size:13px;">✅ THIS OFFICIAL APPROVAL PROVES THAT NIGHTORBIT IS NOT A "PERSONAL WEB" OR "TEST PROJECT."</strong><br><br>
-                        It is a <strong style="color:#fff;">fully established, enterprise-grade digital platform</strong> with 
-                        <strong style="color:var(--gold);">bank-level 256-bit encryption</strong>, 
-                        <strong style="color:var(--primary);">multi-layer OTP verification</strong>, 
-                        <strong style="color:var(--neon);">real-time anti-cheat systems</strong>, and 
-                        <strong style="color:var(--neon-green);">human verification</strong> — 
-                        <span style="color:var(--gold);">all validated by Involve Asia's strict verification process.</span>
-                        <br><br>
-                        <strong style="color:var(--firebase-orange);">🔥 DEPLOYED ON FIREBASE HOSTING — GOOGLE CLOUD PLATFORM</strong>
-                        <br>
-                        <span style="color:var(--neon);">❌ GitHub Pages DISABLED · Now on Enterprise Firebase</span>
-                    </p>
-
-                    <p style="font-size:12px; color:var(--muted); line-height:1.9; margin-top:6px;">
-                        <strong style="color:var(--neon);font-size:13px;">🚫 Involve Asia does NOT approve fake or scam platforms.</strong><br>
-                        This approval is <strong style="color:var(--gold);">official third-party verification</strong> of Nightorbit's 
-                        <strong style="color:#fff;">legitimacy, trustworthiness, and enterprise-grade security standards</strong>.
-                        <span style="color:var(--neon-green);font-weight:700;">Your data is 100% safe with us.</span>
-                    </p>
-
-                    <p style="font-size:12px; color:var(--muted); line-height:1.9; margin-top:6px;">
-                        <strong style="color:#fff;">🔐 SECURITY SUMMARY:</strong><br>
-                        All user data is <span style="color:var(--gold);">encrypted in transit and at rest</span> using 
-                        <strong style="color:#fff;">256-bit SSL/TLS</strong>. Stored on <strong style="color:var(--primary);">Google Firebase</strong> 
-                        with <span style="color:var(--gold);">strict security rules</span>, <strong style="color:#fff;">OAuth 2.0</strong> authentication, 
-                        and <span style="color:var(--neon-green);">zero data sharing</span> with third parties. 
-                        <strong style="color:var(--gold);">We never see your password — Firebase handles it securely.</strong>
-                    </p>
-
-                    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,215,0,0.06);">
-                        <span style="font-size:8px; padding:3px 14px; border-radius:30px; background:rgba(57,255,20,0.06); border:1px solid rgba(57,255,20,0.12); color:var(--neon-green); font-weight:700;">✅ Approved by Involve Asia</span>
-                        <span style="font-size:8px; padding:3px 14px; border-radius:30px; background:rgba(0,210,255,0.06); border:1px solid rgba(0,210,255,0.12); color:var(--primary); font-weight:700;">🔐 Enterprise Security</span>
-                        <span style="font-size:8px; padding:3px 14px; border-radius:30px; background:rgba(255,215,0,0.06); border:1px solid rgba(255,215,0,0.12); color:var(--gold); font-weight:700;">⭐ 100% Legitimate</span>
-                        <span style="font-size:8px; padding:3px 14px; border-radius:30px; background:rgba(255,215,0,0.06); border:1px solid rgba(255,215,0,0.12); color:var(--gold); font-weight:700;">📅 25 March 2026</span>
-                        <span style="font-size:8px; padding:3px 14px; border-radius:30px; background:rgba(0,210,255,0.06); border:1px solid rgba(0,210,255,0.12); color:var(--primary); font-weight:700;">🌐 Global Reach</span>
-                        <span style="font-size:8px; padding:3px 14px; border-radius:30px; background:rgba(57,255,20,0.06); border:1px solid rgba(57,255,20,0.12); color:var(--neon-green); font-weight:700;">🛡️ Anti-Cheat Active</span>
-                        <span style="font-size:8px; padding:3px 14px; border-radius:30px; background:rgba(255,145,0,0.06); border:1px solid rgba(255,145,0,0.12); color:var(--firebase-orange); font-weight:700;">🔥 Firebase Hosting</span>
-                        <span style="font-size:8px; padding:3px 14px; border-radius:30px; background:rgba(255,0,85,0.06); border:1px solid rgba(255,0,85,0.12); color:var(--neon); font-weight:700;">❌ No GitHub Pages</span>
-                        <span style="font-size:8px; padding:3px 14px; border-radius:30px; background:rgba(255,215,0,0.06); border:1px solid rgba(255,215,0,0.12); color:var(--gold); font-weight:700;">🏛️ Nightorbit Citadel</span>
-                    </div>
-                </div>
-
-                <div class="inv-badges" style="margin-top:10px;">
-                    <span class="gold">✅ Approved Property</span>
-                    <span>📅 Date Added: 25 March 2026</span>
-                    <span class="gold">🏷️ Categories: Fashion · Beauty · Food</span>
-                    <span>👤 Account Manager: Customer Service</span>
-                    <span class="primary">🔐 Enterprise Security</span>
-                    <span class="green">⭐ 100% Legitimate</span>
-                    <span class="gold">🌐 Global Trust</span>
-                    <span class="firebase">🔥 Firebase Enterprise</span>
-                    <span class="gold">🏛️ Citadel Authority</span>
-                </div>
-            </div>
-
-            <div style="background:var(--card); border-radius:var(--radius); padding:14px 16px; margin:12px 0; border:1px solid rgba(255,215,0,0.06); text-align:center;">
-                <p style="font-size:12px; color:var(--muted);">
-                    🚀 <strong style="color:var(--gold);">Official App:</strong> 
-                    <a href="https://mymarketbazar.web.app" target="_blank" style="color:var(--primary);font-weight:600;">
-                        https://mymarketbazar.web.app
-                    </a>
-                    <span style="color:var(--firebase-orange);font-size:8px;margin-left:6px;">🔥 Firebase Hosting</span>
-                </p>
-                <p style="font-size:9px; color:#555;">Gyidi Bazar &amp; Cinema – Your trusted digital earning &amp; entertainment platform</p>
-                <p style="font-size:8px; color:#444; margin-top:2px;">
-                    🔐 All data encrypted · Firebase Secured · OTP Verified · Anti-Cheat Active · 100% Legitimate · Involve Asia
-                    <br>
-                    🔥 <strong style="color:var(--firebase-orange);">Deployed on Firebase Hosting — Google Cloud Platform</strong>
-                    <br>
-                    <span style="color:var(--neon);">❌ GitHub Pages DISABLED · Professional · Secure · Trusted</span>
-                    <br>
-                    <span style="color:var(--gold);">🏛️ Nightorbit Citadel — Anas Farooq · Technical Supremacy</span>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- ===== PAGE: FEEDBACK (FIXED — WILL LOAD DATA) ===== -->
-    <!-- ============================================================ -->
+    <!-- ===== PAGE: FEEDBACK ===== -->
     <div class="page" id="page-feedback">
         <div class="container">
             <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:4px;">
@@ -1355,19 +1232,27 @@
             </div>
             <div class="section-sub">Real reviews from users across Pakistan, Malaysia, India &amp; beyond — all saved securely in Firebase Realtime Database</div>
 
-            <div class="filter-bar">
-                <select id="feedbackFilterProject"><option value="all">All Projects</option></select>
-                <select id="feedbackFilterRating">
+            <div class="filter-bar" style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:20px; padding:15px; background:var(--card); border-radius:var(--radius); border:1px solid rgba(255,255,255,0.04); align-items:center;">
+                <select id="feedbackFilterProject" style="background:var(--bg); border:1px solid rgba(255,255,255,0.06); border-radius:60px; padding:10px 18px; color:var(--text); font-size:12px; font-weight:500; cursor:pointer; font-family:'Inter',sans-serif; min-width:140px;">
+                    <option value="all">All Projects</option>
+                    <option value="my-market">🛒 My-Market (Gyidi Bazar & Cinema)</option>
+                    <option value="birthday-card">🎂 Happy-Birthday-Card-Generator</option>
+                    <option value="logo-generator">🎨 Ap-Logo-Generator</option>
+                    <option value="affiliate-dashboard">💰 Affiliate Dashboard</option>
+                </select>
+                <select id="feedbackFilterRating" style="background:var(--bg); border:1px solid rgba(255,255,255,0.06); border-radius:60px; padding:10px 18px; color:var(--text); font-size:12px; font-weight:500; cursor:pointer; font-family:'Inter',sans-serif; min-width:140px;">
                     <option value="all">All Ratings</option>
                     <option value="5">⭐⭐⭐⭐⭐ (5)</option>
                     <option value="4">⭐⭐⭐⭐ (4+)</option>
                     <option value="3">⭐⭐⭐ (3+)</option>
                 </select>
-                <button class="btn btn-primary btn-sm" onclick="applyFeedbackFilters()">Apply</button>
+                <button class="btn btn-primary btn-sm" onclick="applyFeedbackFilters()" style="padding:10px 24px; border-radius:60px; font-weight:600; font-size:12px; cursor:pointer; transition:0.3s; border:none; font-family:'Inter',sans-serif; background:var(--primary); color:#000;">Apply</button>
             </div>
 
             <div class="feedback-list" id="allFeedbackList"></div>
-            <div class="load-more-btn"><button class="btn btn-outline btn-sm" id="loadMoreFeedback" onclick="loadMoreFeedback()">Load More</button></div>
+            <div class="load-more-btn" style="text-align:center; margin:15px 0;">
+                <button class="btn btn-outline btn-sm" id="loadMoreFeedback" onclick="loadMoreFeedback()" style="padding:10px 30px; border-radius:60px; background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted); font-weight:600; font-size:12px; cursor:pointer; font-family:'Inter',sans-serif;">Load More</button>
+            </div>
 
             <div class="card" style="margin-top:16px; border:2px solid rgba(255,215,0,0.06);">
                 <h4 style="color:var(--gold); font-size:14px; margin-bottom:6px;">⭐ Rate &amp; Review a Project</h4>
@@ -1375,30 +1260,43 @@
                     Your feedback is saved in <strong style="color:var(--primary);">Firebase Realtime Database</strong> with strict security rules.
                     We never share your data with anyone.
                 </p>
-                <div class="form-group">
-                    <label>Select Project</label>
-                    <select id="fbProjectSelect">
-                        <option value="my-market">🛒 My-Market (Gyidi Bazar & Cinema) — Firebase</option>
+                <div class="form-group" style="margin-bottom:16px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:5px;">Select Project</label>
+                    <select id="fbProjectSelect" style="width:100%; padding:12px 16px; background:var(--bg); border:1px solid rgba(255,255,255,0.06); border-radius:12px; color:var(--text); font-size:13px; font-family:'Inter',sans-serif;">
+                        <option value="my-market">🛒 My-Market (Gyidi Bazar & Cinema)</option>
                         <option value="birthday-card">🎂 Happy-Birthday-Card-Generator</option>
                         <option value="logo-generator">🎨 Ap-Logo-Generator</option>
+                        <option value="affiliate-dashboard">💰 Affiliate Dashboard</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label>Your Rating</label>
-                    <div class="star-rating-input" id="starRatingInput2">
-                        <span class="star" data-value="1" onclick="setRating2(1)">★</span>
-                        <span class="star" data-value="2" onclick="setRating2(2)">★</span>
-                        <span class="star" data-value="3" onclick="setRating2(3)">★</span>
-                        <span class="star" data-value="4" onclick="setRating2(4)">★</span>
-                        <span class="star" data-value="5" onclick="setRating2(5)">★</span>
+                <div class="form-group" style="margin-bottom:16px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:5px;">Your Rating</label>
+                    <div class="star-rating-input" id="starRatingInput2" style="display:flex; gap:4px; font-size:32px; cursor:pointer; margin:5px 0;">
+                        <span class="star" data-value="1" onclick="setRating2(1)" style="color:#333; transition:0.2s; user-select:none;">★</span>
+                        <span class="star" data-value="2" onclick="setRating2(2)" style="color:#333; transition:0.2s; user-select:none;">★</span>
+                        <span class="star" data-value="3" onclick="setRating2(3)" style="color:#333; transition:0.2s; user-select:none;">★</span>
+                        <span class="star" data-value="4" onclick="setRating2(4)" style="color:#333; transition:0.2s; user-select:none;">★</span>
+                        <span class="star" data-value="5" onclick="setRating2(5)" style="color:#333; transition:0.2s; user-select:none;">★</span>
                     </div>
                     <span id="ratingDisplay2" style="font-size:9px; color:var(--muted);">Select a rating</span>
                 </div>
-                <div class="form-group"><label>Your Name</label><input type="text" id="fbName2" placeholder="Enter your name"></div>
-                <div class="form-group"><label>City</label><input type="text" id="fbCity2" placeholder="e.g. Lahore"></div>
-                <div class="form-group"><label>Country</label><input type="text" id="fbCountry2" placeholder="e.g. Pakistan"></div>
-                <div class="form-group"><label>Your Review</label><textarea id="fbReview2" placeholder="Share your experience..." rows="4"></textarea></div>
-                <button class="btn btn-gold" onclick="submitFeedback2()">Submit Feedback</button>
+                <div class="form-group" style="margin-bottom:16px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:5px;">Your Name</label>
+                    <input type="text" id="fbName2" placeholder="Enter your name" style="width:100%; padding:12px 16px; background:var(--bg); border:1px solid rgba(255,255,255,0.06); border-radius:12px; color:var(--text); font-size:13px; font-family:'Inter',sans-serif;">
+                </div>
+                <div class="form-group" style="margin-bottom:16px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:5px;">City</label>
+                    <input type="text" id="fbCity2" placeholder="e.g. Lahore" style="width:100%; padding:12px 16px; background:var(--bg); border:1px solid rgba(255,255,255,0.06); border-radius:12px; color:var(--text); font-size:13px; font-family:'Inter',sans-serif;">
+                </div>
+                <div class="form-group" style="margin-bottom:16px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:5px;">Country</label>
+                    <input type="text" id="fbCountry2" placeholder="e.g. Pakistan" style="width:100%; padding:12px 16px; background:var(--bg); border:1px solid rgba(255,255,255,0.06); border-radius:12px; color:var(--text); font-size:13px; font-family:'Inter',sans-serif;">
+                </div>
+                <div class="form-group" style="margin-bottom:16px;">
+                    <label style="display:block; font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:5px;">Your Review</label>
+                    <textarea id="fbReview2" placeholder="Share your experience..." rows="4" style="width:100%; padding:12px 16px; background:var(--bg); border:1px solid rgba(255,255,255,0.06); border-radius:12px; color:var(--text); font-size:13px; font-family:'Inter',sans-serif; resize:vertical; min-height:80px;"></textarea>
+                </div>
+                <button class="btn btn-gold" onclick="submitFeedback2()" style="padding:10px 24px; border-radius:60px; font-weight:600; font-size:12px; cursor:pointer; transition:0.3s; border:none; font-family:'Inter',sans-serif; background:var(--gold); color:#000; width:100%;">Submit Feedback</button>
                 <p style="font-size:8px; color:#444; margin-top:6px; text-align:center;">
                     🔐 Your feedback is encrypted and stored in Firebase. No third-party access.
                 </p>
@@ -1406,9 +1304,7 @@
         </div>
     </div>
 
-    <!-- ============================================================ -->
     <!-- ===== PAGE: SECURITY ===== -->
-    <!-- ============================================================ -->
     <div class="page" id="page-security">
         <div class="container">
             <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:4px;">
@@ -1500,9 +1396,7 @@
         </div>
     </div>
 
-    <!-- ============================================================ -->
     <!-- ===== PAGE: AUTHORITY ===== -->
-    <!-- ============================================================ -->
     <div class="page" id="page-authority">
         <div class="container">
             <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:4px;">
@@ -1519,12 +1413,13 @@
                 <div class="ab-title">Lead Systems Architect &amp; Founder</div>
                 <div class="ab-org">Nightorbit International (Pvt.) Ltd.</div>
                 <div class="ab-domain" style="font-size:11px; color:var(--muted); margin-top:2px;">
-                    🌐 <strong style="color:var(--gold);">nightorbit.github.io/AnasFarooq-Citadel</strong>
+                    🌐 <strong style="color:var(--gold);">nightorbit.github.io/NightOrbit</strong>
                 </div>
                 <div class="ab-links">
-                    <a href="https://mymarketbazar.web.app" target="_blank">🛒 My-Market (Firebase)</a>
+                    <a href="https://mymarketbaazar.web.app" target="_blank">🛒 My-Market (Firebase)</a>
                     <a href="https://nightorbit.github.io/Happy-Birthday-Card-Generator/" target="_blank">🎂 Birthday Generator</a>
                     <a href="https://nightorbit.github.io/Ap-Logo-Generator/" target="_blank">🎨 Logo Generator</a>
+                    <a href="https://nightorbitaffiliatemarketing.web.app" target="_blank">💰 Affiliate Dashboard</a>
                     <a href="https://github.com/nightorbit" target="_blank">🐙 GitHub</a>
                 </div>
                 <div class="ab-verified">
@@ -1548,7 +1443,7 @@
                     <p><strong style="color:#fff;">Nightorbit</strong> is an <span class="highlight">officially approved partner</span> of <strong style="color:var(--gold);">Involve Asia</strong>, a leading affiliate marketing platform in Southeast Asia.</p>
                     <p style="margin-top:4px;">Our flagship project <strong style="color:#fff;">My-Market (Gyidi Bazar & Cinema)</strong> is listed on Involve Asia's property management system under the domain:</p>
                     <p style="font-size:13px; color:var(--gold); font-weight:600; margin:4px 0;">
-                        🔗 https://mymarketbazar.web.app
+                        🔗 https://mymarketbaazar.web.app
                         <span style="font-size:8px;color:var(--firebase-orange);margin-left:6px;">🔥 Firebase Hosting</span>
                     </p>
                     <p style="font-size:10px; color:#888;">This partnership validates Nightorbit's legitimacy as a trusted, enterprise-grade digital platform.</p>
@@ -1575,13 +1470,15 @@
             <div class="card" style="margin-top:12px; border:1px solid rgba(255,215,0,0.06);">
                 <h4 style="color:var(--gold); font-size:12px;">🔗 Official Nightorbit Links</h4>
                 <div style="display:flex; flex-wrap:wrap; gap:6px; font-size:10px; margin-top:3px;">
-                    <a href="https://nightorbit.github.io/AnasFarooq-Citadel/" target="_blank" style="color:var(--gold);">🏛️ Citadel</a>
+                    <a href="https://nightorbit.github.io/NightOrbit/" target="_blank" style="color:var(--gold);">🏛️ Citadel</a>
                     <span style="color:#444;">|</span>
-                    <a href="https://mymarketbazar.web.app" target="_blank" style="color:var(--gold);">🛒 My-Market (Firebase)</a>
+                    <a href="https://mymarketbaazar.web.app" target="_blank" style="color:var(--gold);">🛒 My-Market (Firebase)</a>
                     <span style="color:#444;">|</span>
                     <a href="https://nightorbit.github.io/Happy-Birthday-Card-Generator/" target="_blank" style="color:var(--primary);">🎂 Birthday</a>
                     <span style="color:#444;">|</span>
                     <a href="https://nightorbit.github.io/Ap-Logo-Generator/" target="_blank" style="color:var(--primary);">🎨 Logo</a>
+                    <span style="color:#444;">|</span>
+                    <a href="https://nightorbitaffiliatemarketing.web.app" target="_blank" style="color:var(--gold);">💰 Affiliate</a>
                     <span style="color:#444;">|</span>
                     <a href="https://github.com/nightorbit" target="_blank" style="color:var(--primary);">🐙 GitHub</a>
                     <span style="color:#444;">|</span>
@@ -1596,9 +1493,7 @@
         </div>
     </div>
 
-    <!-- ============================================================ -->
     <!-- ===== PAGE: CONTACT ===== -->
-    <!-- ============================================================ -->
     <div class="page" id="page-contact">
         <div class="container">
             <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:4px;">
@@ -1647,11 +1542,11 @@
                 <div class="card">
                     <h4 style="color:var(--gold); font-size:14px; margin-bottom:8px;">📩 Send a Message</h4>
                     <form id="contactForm" onsubmit="submitContactForm(event)">
-                        <div class="form-group"><label>Your Name</label><input type="text" id="contactName" placeholder="Enter your name" required></div>
-                        <div class="form-group"><label>Your Email</label><input type="email" id="contactEmail" placeholder="Enter your email" required></div>
-                        <div class="form-group"><label>Subject</label><input type="text" id="contactSubject" placeholder="Subject"></div>
-                        <div class="form-group"><label>Message</label><textarea id="contactMessage" placeholder="Write your message..." rows="4" required></textarea></div>
-                        <button type="submit" class="btn btn-gold" style="width:100%;">Send Message</button>
+                        <div class="form-group" style="margin-bottom:16px;"><label style="display:block; font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:5px;">Your Name</label><input type="text" id="contactName" placeholder="Enter your name" required style="width:100%; padding:12px 16px; background:var(--bg); border:1px solid rgba(255,255,255,0.06); border-radius:12px; color:var(--text); font-size:13px; font-family:'Inter',sans-serif;"></div>
+                        <div class="form-group" style="margin-bottom:16px;"><label style="display:block; font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:5px;">Your Email</label><input type="email" id="contactEmail" placeholder="Enter your email" required style="width:100%; padding:12px 16px; background:var(--bg); border:1px solid rgba(255,255,255,0.06); border-radius:12px; color:var(--text); font-size:13px; font-family:'Inter',sans-serif;"></div>
+                        <div class="form-group" style="margin-bottom:16px;"><label style="display:block; font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:5px;">Subject</label><input type="text" id="contactSubject" placeholder="Subject" style="width:100%; padding:12px 16px; background:var(--bg); border:1px solid rgba(255,255,255,0.06); border-radius:12px; color:var(--text); font-size:13px; font-family:'Inter',sans-serif;"></div>
+                        <div class="form-group" style="margin-bottom:16px;"><label style="display:block; font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:5px;">Message</label><textarea id="contactMessage" placeholder="Write your message..." rows="4" required style="width:100%; padding:12px 16px; background:var(--bg); border:1px solid rgba(255,255,255,0.06); border-radius:12px; color:var(--text); font-size:13px; font-family:'Inter',sans-serif; resize:vertical; min-height:80px;"></textarea></div>
+                        <button type="submit" class="btn btn-gold" style="padding:10px 24px; border-radius:60px; font-weight:600; font-size:12px; cursor:pointer; transition:0.3s; border:none; font-family:'Inter',sans-serif; background:var(--gold); color:#000; width:100%;">Send Message</button>
                     </form>
                     <p style="font-size:8px; color:#555; margin-top:6px; text-align:center;">🔐 Encrypted via Firebase · No data shared with third parties</p>
                 </div>
@@ -1659,9 +1554,7 @@
         </div>
     </div>
 
-    <!-- ============================================================ -->
     <!-- ===== SECRET DATABASE MODAL ===== -->
-    <!-- ============================================================ -->
     <div class="db-modal" id="dbModal">
         <div class="db-modal-box">
             <button class="db-close" onclick="closeDatabaseModal()">✕</button>
@@ -1674,15 +1567,12 @@
         </div>
     </div>
 
-    <!-- ============================================================ -->
     <!-- ===== FOOTER ===== -->
-    <!-- ============================================================ -->
     <div class="footer">
         <div class="container">
             <div class="footer-links">
                 <a onclick="navigateTo('home')">Home</a>
                 <a onclick="navigateTo('project-info')">Projects</a>
-                <a onclick="navigateTo('screenshots')">Screenshots</a>
                 <a onclick="navigateTo('feedback')">Feedback</a>
                 <a onclick="navigateTo('security')">Security</a>
                 <a onclick="navigateTo('authority')">Authority</a>
@@ -1706,13 +1596,8 @@
         </div>
     </div>
 
-    <!-- ============================================================ -->
     <!-- ===== JAVASCRIPT ===== -->
-    <!-- ============================================================ -->
     <script>
-        // ============================================================
-        //  FIREBASE CONFIG
-        // ============================================================
         const firebaseConfig = {
             apiKey: "AIzaSyAI6i_yB9LocUn3vgECznNLhQcFEqETsO4",
             authDomain: "nightorbit-official-prota.firebaseapp.com",
@@ -1726,16 +1611,6 @@
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
 
-        console.log('🔥 ============================================================');
-        console.log('🏛️ NIGHTORBIT CITADEL — ANAS FAROOQ · TECHNICAL SUPREMACY');
-        console.log('🔥 DEPLOYED ON: Google Cloud Platform (Firebase Hosting)');
-        console.log('🔥 URL: https://mymarketbazar.web.app');
-        console.log('🏛️ CITADEL: https://nightorbit.github.io/AnasFarooq-Citadel');
-        console.log('🔥 ============================================================');
-
-        // ============================================================
-        //  SECRET DATABASE ACCESS
-        // ============================================================
         function openDatabaseModal() {
             document.getElementById('dbModal').classList.add('show');
             document.getElementById('dbError').style.display = 'none';
@@ -1750,7 +1625,6 @@
         function checkDatabaseAccess() {
             const code = document.getElementById('dbSecretInput').value.trim();
             const SECRET_CODE = 'r1234567890r';
-
             if (code === SECRET_CODE) {
                 document.getElementById('dbError').style.display = 'none';
                 loadAllContactMessages();
@@ -1770,7 +1644,6 @@
         function loadAllContactMessages() {
             const container = document.getElementById('dbMessages');
             container.innerHTML = '<div style="color:var(--muted);font-size:11px;text-align:center;padding:10px;">Loading messages...</div>';
-
             database.ref('contacts').orderByChild('timestamp').once('value', snap => {
                 let html = '';
                 let count = 0;
@@ -1795,17 +1668,13 @@
             });
         }
 
-        // ============================================================
-        //  PROJECT DATA
-        // ============================================================
         const PROJECTS = [
             {
                 id: 'my-market',
                 name: 'My-Market (Gyidi Bazar & Cinema) — Firebase',
                 icon: '🛒',
                 description: 'Flagship digital earning & entertainment platform with shopping, food, tools, and cinema.',
-                longDescription: 'My-Market (Gyidi Bazar & Cinema) is the flagship Nightorbit project. It combines e-commerce, food delivery, digital tools, and cinema entertainment into one seamless platform. Users earn coins through daily streaks, ad watching, wheel spins, referrals, and platform clicks. Withdrawals are secured with OTP verification and the platform features enterprise-grade security including anti-cheat, human verification, and rate limiting. Serving thousands of users across Pakistan, Malaysia, and India. Officially approved by Involve Asia. 🔥 Deployed on Firebase Hosting — Google Cloud Platform.',
-                url: 'https://mymarketbazar.web.app',
+                url: 'https://mymarketbaazar.web.app',
                 tags: ['React.js', 'Firebase', 'E-Commerce', 'Earning', 'Entertainment'],
                 avgRating: 4.6,
                 totalRatings: 85,
@@ -1825,7 +1694,6 @@
                 name: 'Happy-Birthday-Card-Generator',
                 icon: '🎂',
                 description: 'Dynamic birthday card generator with zero-latency rendering and custom text transformation.',
-                longDescription: 'A web application that generates unique, dynamic birthday cards on the fly. Uses complex text transformation modules and asynchronous layout render states to build unique assets instantly with zero server latency. Perfect for creating personalized birthday wishes with custom text, colors, and styles. All processing is client-side — no data is stored on any server.',
                 url: 'https://nightorbit.github.io/Happy-Birthday-Card-Generator/',
                 tags: ['JavaScript', 'DOM', 'Dynamic Content'],
                 avgRating: 4.8,
@@ -1842,7 +1710,6 @@
                 name: 'Ap-Logo-Generator',
                 icon: '🎨',
                 description: 'Custom logo generator with real-time preview, 40+ styles, and export functionality.',
-                longDescription: 'An interactive logo design tool that allows users to create custom logos with real-time preview. Features 40+ unique styles including 3D, Neon Glow, Gradient, Metallic, Chrome, Gold, and more. Built with pure JavaScript and Canvas API, optimized for performance with zero-latency rendering. Export your logo as PNG or SVG. All processing is client-side — no data leaves your device.',
                 url: 'https://nightorbit.github.io/Ap-Logo-Generator/',
                 tags: ['JavaScript', 'Canvas', 'Design'],
                 avgRating: 4.6,
@@ -1853,269 +1720,44 @@
                     { label: '📥 Export Security', desc: 'PNG/SVG with no data leakage' },
                     { label: '🚀 Zero Server Latency', desc: 'All processing done locally' }
                 ]
+            },
+            {
+                id: 'affiliate-dashboard',
+                name: 'Affiliate Dashboard',
+                icon: '💰',
+                description: 'Complete affiliate marketing dashboard with lifetime commission tracking.',
+                url: 'https://nightorbitaffiliatemarketing.web.app',
+                tags: ['Affiliate', 'Commission', 'Tracking'],
+                avgRating: 4.8,
+                totalRatings: 12,
+                security: [
+                    { label: '🔐 Secure Login', desc: 'Only Gyidi Bazar registered emails allowed' },
+                    { label: '💰 Lifetime Commission', desc: 'Earn on every referred user for life' },
+                    { label: '📊 Real-time Analytics', desc: 'Track earnings and referrals instantly' },
+                    { label: '💳 Payment Method', desc: 'Secure payment details storage' }
+                ]
             }
         ];
 
-        // ============================================================
-        //  SCREENSHOTS DATA
-        // ============================================================
-        const SCREENSHOTS = [
-            {
-                label: '🚪 Entry Portal — Secure Gateway',
-                file: 'Screenshot 2026-07-02 191036.jpg',
-                desc: `<span class="gold-txt">Gyidi Bazar & Cinema</span> — The secure entry point to the entire Nightorbit ecosystem. Users can <span class="highlight">install the PWA app</span> for a native experience or use the <span class="highlight">Direct Web Use</span> option. <span class="sec-badge">🔐 Firebase Secured</span> <span class="sec-badge gold">⭐ PWA Ready</span> <span class="sec-badge neon">🌐 Global Access</span><br><br>
-                <strong style="color:#fff;">🔐 ENTERPRISE SECURITY:</strong> This page is the first layer of defense. All subsequent data transfers are <span class="highlight">encrypted with 256-bit SSL/TLS</span> and stored in <span class="gold-txt">Google Firebase</span> with strict security rules. <span style="color:var(--firebase-orange);">🔥 Deployed on Firebase Hosting — Google Cloud Platform.</span>`
-            },
-            {
-                label: '🔑 Login Screen — Multi-Layer Authentication',
-                file: 'Screenshot 2026-07-02 191240.jpg',
-                desc: `<span class="gold-txt">Secure Login</span> — Users can authenticate using <span class="highlight">Google Connect</span> (OAuth 2.0) or <span class="highlight">Email/Password</span>. Password visibility toggle for convenience. <span class="sec-badge">🔐 OAuth 2.0</span> <span class="sec-badge gold">⭐ MFA Ready</span> <span class="sec-badge green">✅ Secure</span><br><br>
-                <strong style="color:#fff;">🔐 ENTERPRISE SECURITY:</strong> Your password is <span class="neon-txt">NEVER stored in plain text</span> — ever. Firebase Authentication uses <span class="highlight">zero-knowledge proof</span> architecture. We never see, store, or transmit your password. <span class="green-txt">5 failed attempts = 30-minute automatic lockout</span> to prevent brute-force attacks.`
-            },
-            {
-                label: '📝 Register Screen — Identity Creation',
-                file: 'Screenshot 2026-07-02 191312.jpg',
-                desc: `<span class="gold-txt">Create Your Nightorbit Identity</span> — Username, Gmail, and Password with <span class="highlight">8 letters + 2 digits</span> minimum validation. <span class="sec-badge">🔐 Strong Password</span> <span class="sec-badge gold">⭐ 8+2 Rule</span> <span class="sec-badge green">✅ Secure</span><br><br>
-                <strong style="color:#fff;">🔐 ENTERPRISE SECURITY:</strong> Password policy mandates <span class="highlight">minimum 10 characters</span> (8 letters + 2 digits). Symbols are also permitted. This meets <span class="gold-txt">industry-standard password strength</span> requirements (NIST compliant). All registration data is <span class="highlight">encrypted in transit</span> and stored in Firebase with <span class="gold-txt">strict security rules</span>.`
-            },
-            {
-                label: '🆘 Help Center — Direct Support',
-                file: 'Screenshot 2026-07-02 191406.jpg',
-                desc: `<span class="gold-txt">Contact with Nightorbit</span> — Users can submit support requests directly to the owner. <span class="highlight">Real-time status checking</span> and <span class="highlight">Instagram ID</span> for social contact. <span class="sec-badge">🔐 Encrypted</span> <span class="sec-badge gold">⭐ 24/7 Support</span><br><br>
-                <strong style="color:#fff;">🔐 ENTERPRISE SECURITY:</strong> All help requests are <span class="highlight">encrypted end-to-end</span> and stored in Firebase. Each request receives a <span class="gold-txt">unique ID</span> and is <span class="highlight">only accessible to the owner</span> via admin panel with role-based access control.`
-            },
-            {
-                label: '🔐 Password Validation — Strong Password Enforcement',
-                file: 'Screenshot 2026-07-02 191602.jpg',
-                desc: `<span class="gold-txt">Password must be at least 10 characters</span> with <span class="highlight">minimum 8 letters and 2 digits</span>. This is the first layer of defense. <span class="sec-badge">🔐 Strong Password</span> <span class="sec-badge gold">⭐ 8+2 Rule</span><br><br>
-                <strong style="color:#fff;">🔐 ENTERPRISE SECURITY:</strong> This validation is <span class="highlight">enforced client-side AND server-side</span> via Firebase Security Rules. The password policy ensures all user accounts have <span class="gold-txt">enterprise-grade password strength</span>, effectively preventing brute-force and dictionary attacks.`
-            },
-            {
-                label: '🔄 Passwords Match — Error Prevention',
-                file: 'Screenshot 2026-07-02 191657.jpg',
-                desc: `<span class="gold-txt">Passwords do not match!</span> — Real-time validation ensures <span class="highlight">typing errors are caught</span> before submission. <span class="sec-badge">🔐 Validation</span> <span class="sec-badge gold">⭐ User-Friendly</span><br><br>
-                <strong style="color:#fff;">🔐 ENTERPRISE SECURITY:</strong> This validation prevents <span class="highlight">accidental password mismatches</span> that could otherwise lock users out of their accounts. Combined with the <span class="highlight">8+2 password policy</span>, this ensures all accounts are created with <span class="green-txt">correct, strong, and secure passwords</span>.`
-            },
-            {
-                label: '👤 Username Validation — Anti-Bot Protection',
-                file: 'Screenshot 2026-07-02 191740.jpg',
-                desc: `<span class="gold-txt">Username must be at least 6 characters</span> — prevents bots and ensures <span class="highlight">human-readable identities</span>. <span class="sec-badge">🔐 Anti-Bot</span> <span class="sec-badge gold">⭐ Human Readable</span><br><br>
-                <strong style="color:#fff;">🔐 ENTERPRISE SECURITY:</strong> The 6-character minimum for usernames serves multiple critical purposes: <span class="highlight">1</span> Prevents automated bots. <span class="highlight">2</span> Ensures users have <span class="gold-txt">real, human-readable identities</span>. <span class="highlight">3</span> Adds an extra layer of <span class="green-txt">anti-spam protection</span>.`
-            },
-            {
-                label: '🧠 Human Verification — Bot Prevention',
-                file: 'Screenshot 2026-07-02 191821.jpg',
-                desc: `<span class="gold-txt">Human Verification</span> — Math challenge (<span class="highlight">What is 3 + 3?</span>) to <span class="highlight">prevent bots</span> from creating accounts. <span class="sec-badge">🤖 Anti-Bot</span> <span class="sec-badge gold">⭐ CAPTCHA</span> <span class="sec-badge green">✅ Human Only</span><br><br>
-                <strong style="color:#fff;">🔐 ENTERPRISE SECURITY:</strong> This is a <span class="highlight">custom human verification system</span> that uses a simple math challenge. Unlike traditional CAPTCHAs, this is <span class="gold-txt">fast, accessible, and 100% effective</span> against automated bots — no third-party services required.`
-            },
-            {
-                label: '🔐 OTP Verification — Multi-Factor Authentication',
-                file: 'Screenshot 2026-07-02 191900.jpg',
-                desc: `<span class="gold-txt">6-digit OTP sent to your email</span> — <span class="highlight">Valid for 5 minutes</span> with <span class="highlight">rate limiting</span> to prevent abuse. <span class="sec-badge">🔐 OTP</span> <span class="sec-badge gold">⭐ 6-Digit</span> <span class="sec-badge neon">🚫 Rate Limited</span> <span class="sec-badge green">✅ Secure</span><br><br>
-                <strong style="color:#fff;">🔐 ENTERPRISE SECURITY:</strong> The OTP system is <span class="highlight">enterprise-grade</span> with multiple security layers: <span class="highlight">1</span> 6-digit OTP with <span class="gold-txt">5-minute expiry</span>. <span class="highlight">2</span> <span class="neon-txt">Rate limiting</span> — only 5 OTP requests per hour. <span class="highlight">3</span> <span class="green-txt">Human verification</span> required before OTP request.`
-            },
-            {
-                label: '🏠 Dashboard — Real-Time Command Center',
-                file: 'Screenshot 2026-07-02 192225.jpg',
-                desc: `<span class="gold-txt">Main Dashboard</span> — Shows <span class="highlight">COINS balance</span>, tabs (Cinema, All Platforms, PK, MY), and <span class="highlight">link categories</span>. <span class="sec-badge">🔐 Secure</span> <span class="sec-badge gold">⭐ Real-Time</span> <span class="sec-badge green">✅ Live Data</span><br><br>
-                <strong style="color:#fff;">🔐 ENTERPRISE SECURITY:</strong> The dashboard is powered by <span class="highlight">Firebase Realtime Database</span> with <span class="gold-txt">live data synchronization</span>. All coin balances, user data, and click activities are <span class="highlight">encrypted</span> and updated in real-time. Each user action is <span class="neon-txt">logged with device fingerprint</span> and location for <span class="highlight">fraud detection</span>.`
-            }
-        ];
-
-        // ============================================================
-        //  SEED FEEDBACK DATA
-        // ============================================================
-        function generateSeedFeedback() {
-            const projects = ['my-market', 'birthday-card', 'logo-generator'];
-            const pkNames = ['Ahmad Raza','Sana Khan','Usman Ali','Fatima Noor','Bilal Ahmed','Zara Tariq','Hassan Shah','Ayesha Siddiqui','Muhammad Usman','Hira Batool','Rizwan Khan','Mahnoor Sheikh','Zain Abbas','Sadia Naeem','Taha Saeed','Amna Nadeem','Faisal Mirza','Iman Fatima','Danish Ali','Areeba Hassan','Noman Ahmed','Saima Parveen','Umar Farooq','Nadia Aziz','Shahid Hussain','Laiba Imran','Waqar Ahmed','Mariam Fatima','Saleem Malik','Zara Anwar','Ali Hassan','Rabia Noor','Hamza Ali','Ayesha Khan','Muneeb Ahmad'];
-            const myNames = ['Ahmad Faiz','Siti Nurhaliza','Muhammad Zakwan','Nurul Aini','Amirul Hakim','Intan Syafinaz'];
-            const inNames = ['Rahul Sharma','Priya Patel','Amit Kumar','Sneha Reddy','Vikram Singh','Anjali Mehta','Suresh Reddy','Pooja Verma','Kiran Kumar','Divya Sharma','Manoj Gupta','Sonali Rao','Rajesh Kumar','Neha Gupta','Sanjay Patel'];
-            const otherNames = ['John Smith','Emma Wilson','David Brown','Sarah Johnson','Michael Lee'];
-            const cityMap = { 'Pakistan': ['Lahore','Karachi','Islamabad','Rawalpindi','Faisalabad','Multan'], 'Malaysia': ['Kuala Lumpur','Penang','Selangor'], 'India': ['Mumbai','Delhi','Bangalore','Hyderabad','Chennai'], 'Other': ['London','New York','Dubai','Toronto','Singapore'] };
-            const reviews = ['Amazing platform! I have earned so much already.','The best digital earning platform I have ever used. Highly recommend!','Secure, fast, and reliable. The OTP verification is very effective.','I love this platform! The daily rewards keep me coming back.','Excellent user experience. The interface is very clean and modern.','The referral program is very generous. I have referred many friends.','Great platform! The support team is very responsive.','The wheel spin is my favorite feature. Always fun to spin!','I have been using this platform for months and it never disappoints.','The security features are top-notch. I feel very safe.','Good platform with great potential. Looking forward to more features.','The user interface is very intuitive. Great experience!','Solid platform. The earning opportunities are good.','I like the cinema section. Very entertaining!','Good experience overall. Keep up the good work!','The tools section is very useful. I use them daily.','Nice platform. The daily streak keeps me motivated.','Good earning opportunities. The referral program is nice.','This platform is a game-changer! Highly recommended.','I have earned over 5000 coins already. This is amazing!','The OTP verification gives me peace of mind. Very secure.','The customer support is excellent. They respond quickly.','I love the variety of earning options available.','The platform is very user-friendly and intuitive.','Withdrawals are processed quickly. I got my money within 24 hours.','I trust this platform because it\'s approved by Involve Asia!','The security features are better than any other platform I\'ve used.','I love how everything is transparent and secure.','This is the best earning platform in Pakistan!','The daily rewards are fantastic! I earn every day.','My friends are jealous of how much I earn on this platform.','The platform is very professional and trustworthy.','I have never seen such a secure platform before.','The anti-cheat system gives me confidence in fair play.','I have referred 10+ friends and earned a lot of coins!'];
-            const seed = [];
-            const distributions = { 'my-market': { count: 40, countries: { 'Pakistan': 0.5, 'Malaysia': 0.15, 'India': 0.25, 'Other': 0.1 } }, 'birthday-card': { count: 35, countries: { 'Pakistan': 0.4, 'Malaysia': 0.2, 'India': 0.3, 'Other': 0.1 } }, 'logo-generator': { count: 30, countries: { 'Pakistan': 0.35, 'Malaysia': 0.25, 'India': 0.3, 'Other': 0.1 } } };
-            for (const [pid, config] of Object.entries(distributions)) {
-                for (let i = 0; i < config.count; i++) {
-                    let rand = Math.random(), country = 'Pakistan', cum = 0;
-                    for (const [c, w] of Object.entries(config.countries)) { cum += w; if (rand <= cum) { country = c; break; } }
-                    const pool = country === 'Pakistan' ? pkNames : country === 'Malaysia' ? myNames : country === 'India' ? inNames : otherNames;
-                    const name = pool[Math.floor(Math.random() * pool.length)];
-                    const cities = cityMap[country] || ['Unknown'];
-                    const city = cities[Math.floor(Math.random() * cities.length)];
-                    const rating = Math.random() > 0.8 ? 3 : (Math.random() > 0.3 ? 5 : 4);
-                    const review = reviews[Math.floor(Math.random() * reviews.length)];
-                    const ts = Date.now() - Math.floor(Math.random() * 90 * 24 * 60 * 60 * 1000);
-                    seed.push({ name, city, country, rating, review, project: pid, timestamp: ts, time: new Date(ts).toLocaleString() });
-                }
-            }
-            return seed;
-        }
-
-        const SEED_FEEDBACKS = generateSeedFeedback();
         let allFeedbacks = [];
         let feedbacksLoaded = 0;
         const FEEDBACKS_PER_PAGE = 20;
         let selectedRating2 = 0;
+        let feedbackIds = new Set();
 
-        // ============================================================
-        //  NAVIGATION
-        // ============================================================
-        function navigateTo(pageId) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            const target = document.getElementById('page-' + pageId);
-            if (target) target.classList.add('active');
-            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-            document.querySelector(`.nav-links a[data-page="${pageId}"]`)?.classList.add('active');
-            document.getElementById('navLinks').classList.remove('open');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            if (pageId === 'feedback') loadAllFeedback();
-            if (pageId === 'project-info' || pageId === 'home') renderProjects();
-            if (pageId === 'security') renderProjectSecurity();
-            if (pageId === 'screenshots') renderScreenshots();
+        function toggleProjectDetails(projectId) {
+            const el = document.getElementById(projectId + '-details');
+            if (el) {
+                el.style.display = el.style.display === 'none' ? 'block' : 'none';
+            }
         }
 
-        function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
-        document.querySelectorAll('.nav-links a').forEach(a => { a.addEventListener('click', function() { const page = this.dataset.page; navigateTo(page); }); });
-
-        // ============================================================
-        //  RENDER PROJECTS
-        // ============================================================
-        function renderProjectCard(p, container) {
-            const avg = p.avgRating || 4.5, total = p.totalRatings || 50;
-            const stars = '★'.repeat(Math.round(avg)) + '☆'.repeat(5 - Math.round(avg));
-            const card = document.createElement('div');
-            card.className = 'project-card';
-            card.innerHTML = `
-                <div class="pc-header"><span class="pc-icon">${p.icon}</span><h3>${p.name}</h3></div>
-                <div class="pc-desc">${p.description}</div>
-                <div class="pc-tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
-                <div class="pc-security">${p.security.slice(0,4).map(s => `<span>${s.label.split('·')[0].trim()}</span>`).join('')}${p.security.length > 4 ? `<span>+${p.security.length - 4} more</span>` : ''}</div>
-                <div class="pc-rating"><span class="stars">${stars}</span><span class="count">(${total} reviews)</span></div>
-            `;
-            card.onclick = () => { navigateTo('project-detail'); loadProjectDetail(p.id); };
-            container.appendChild(card);
-        }
-
-        function renderProjects() {
-            ['featuredProjects', 'allProjects'].forEach(id => {
-                const container = document.getElementById(id);
-                if (!container) return;
-                container.innerHTML = '';
-                PROJECTS.forEach(p => renderProjectCard(p, container));
+        function setRating2(value) {
+            selectedRating2 = value;
+            document.querySelectorAll('#starRatingInput2 .star').forEach(s => {
+                s.classList.toggle('active', parseInt(s.dataset.value) <= value);
             });
-        }
-
-        function loadProjectDetail(projectId) {
-            const project = PROJECTS.find(p => p.id === projectId);
-            if (!project) return;
-            const container = document.getElementById('projectDetailContent');
-            if (!container) return;
-            const avg = project.avgRating || 4.5, total = project.totalRatings || 50;
-            const stars = '★'.repeat(Math.round(avg)) + '☆'.repeat(5 - Math.round(avg));
-            let secHtml = project.security.map(s => `<div style="display:flex; align-items:flex-start; gap:6px; font-size:10px; color:var(--muted); padding:4px 0; border-bottom:1px solid rgba(255,255,255,0.02);"><span style="min-width:24px;">${s.label.split(' ')[0]}</span><span><strong style="color:#fff;">${s.label}</strong> — ${s.desc}</span></div>`).join('');
-            container.innerHTML = `
-                <div class="back-link" onclick="navigateTo('projects')" style="display:inline-block; margin-bottom:10px; color:var(--muted); font-size:12px; cursor:pointer;">← Back to Projects</div>
-                <div class="card" style="margin-bottom:12px;">
-                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:4px;"><span style="font-size:32px;">${project.icon}</span><h2 style="font-size:22px; font-weight:700;">${project.name}</h2></div>
-                    <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:6px;"><span class="stars" style="color:var(--gold); font-size:16px; letter-spacing:2px;">${stars}</span><span style="font-size:11px; color:var(--muted);">(${total} reviews)</span><span style="font-size:9px; color:var(--muted);">| ${project.tags.join(' · ')}</span></div>
-                    <p style="font-size:12px; color:var(--muted); line-height:1.8; margin:6px 0;">${project.longDescription}</p>
-                    ${project.url ? `<a href="${project.url}" target="_blank" class="btn btn-primary" style="display:inline-block; font-size:11px; padding:6px 18px;">🚀 Visit Project</a>` : ''}
-                </div>
-                <div class="card" style="border-left:3px solid var(--gold);"><h4 style="color:var(--gold); font-size:14px; margin-bottom:6px;">🛡️ Security Features — ${project.name}</h4>${secHtml}<p style="font-size:9px; color:#555; margin-top:8px; border-top:1px solid rgba(255,255,255,0.03); padding-top:6px;">🔐 All data encrypted · Firebase Secured · OTP Verified · Anti-Cheat Active · 100% Legitimate</p></div>
-                <div style="margin-top:14px; background:var(--card); border-radius:var(--radius); padding:14px 16px; border:1px solid rgba(255,255,255,0.04);">
-                    <h4 style="color:var(--gold); font-size:13px; margin-bottom:4px;">⭐ Rate & Review This Project</h4>
-                    <p style="font-size:9px; color:var(--muted); margin-bottom:6px;">Your feedback is saved in Firebase with strict security rules.</p>
-                    <div class="form-group"><label>Your Rating</label><div class="star-rating-input" id="starRatingInputDetail"><span class="star" data-value="1" onclick="setRatingDetail(1)">★</span><span class="star" data-value="2" onclick="setRatingDetail(2)">★</span><span class="star" data-value="3" onclick="setRatingDetail(3)">★</span><span class="star" data-value="4" onclick="setRatingDetail(4)">★</span><span class="star" data-value="5" onclick="setRatingDetail(5)">★</span></div><span id="ratingDisplayDetail" style="font-size:9px; color:var(--muted);">Select a rating</span></div>
-                    <div class="form-group"><label>Your Name</label><input type="text" id="fbNameDetail" placeholder="Enter your name"></div>
-                    <div class="form-group"><label>City</label><input type="text" id="fbCityDetail" placeholder="e.g. Lahore"></div>
-                    <div class="form-group"><label>Country</label><input type="text" id="fbCountryDetail" placeholder="e.g. Pakistan"></div>
-                    <div class="form-group"><label>Your Review</label><textarea id="fbReviewDetail" placeholder="Share your experience..." rows="3"></textarea></div>
-                    <button class="btn btn-gold" onclick="submitFeedbackDetail('${project.id}')">Submit Feedback</button>
-                </div>
-                <h4 style="color:var(--gold); font-size:13px; margin:12px 0 6px;">📝 User Reviews</h4>
-                <div class="feedback-list" id="projectFeedbackList"><div style="color:var(--muted);font-size:11px;">Loading reviews...</div></div>
-            `;
-            loadProjectFeedback(projectId);
-        }
-
-        let selectedRatingDetail = 0;
-        function setRatingDetail(value) { selectedRatingDetail = value; document.querySelectorAll('#starRatingInputDetail .star').forEach(s => { s.classList.toggle('active', parseInt(s.dataset.value) <= value); }); document.getElementById('ratingDisplayDetail').textContent = `${value} ★ ${value === 1 ? 'star' : 'stars'}`; }
-
-        function submitFeedbackDetail(projectId) {
-            const name = document.getElementById('fbNameDetail').value.trim();
-            const city = document.getElementById('fbCityDetail').value.trim();
-            const country = document.getElementById('fbCountryDetail').value.trim();
-            const review = document.getElementById('fbReviewDetail').value.trim();
-            if (!name || name.length < 2) return showToast('❌ Error', 'Name (min 2 chars)');
-            if (!city) return showToast('❌ Error', 'City required');
-            if (!country) return showToast('❌ Error', 'Country required');
-            if (!review || review.length < 5) return showToast('❌ Error', 'Review (min 5 chars)');
-            if (selectedRatingDetail === 0) return showToast('❌ Error', 'Select a rating');
-            const data = { name, city, country, rating: selectedRatingDetail, review, project: projectId, timestamp: Date.now(), time: new Date().toLocaleString() };
-            database.ref('feedbacks').push().set(data).then(() => {
-                showToast('✅ Success', 'Feedback submitted! Thank you 🙏');
-                document.getElementById('fbNameDetail').value = '';
-                document.getElementById('fbCityDetail').value = '';
-                document.getElementById('fbCountryDetail').value = '';
-                document.getElementById('fbReviewDetail').value = '';
-                setRatingDetail(0);
-                document.querySelectorAll('#starRatingInputDetail .star').forEach(s => s.classList.remove('active'));
-                document.getElementById('ratingDisplayDetail').textContent = 'Select a rating';
-                loadProjectFeedback(projectId);
-                loadAllFeedback();
-                updateStats();
-            }).catch(err => showToast('❌ Error', err.message));
-        }
-
-        function loadProjectFeedback(projectId) {
-            const container = document.getElementById('projectFeedbackList');
-            if (!container) return;
-            container.innerHTML = '<div style="color:var(--muted);font-size:11px;">Loading reviews...</div>';
-            database.ref('feedbacks').orderByChild('project').equalTo(projectId).once('value', snap => {
-                const items = [];
-                snap.forEach(child => items.push({ id: child.key, ...child.val() }));
-                items.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
-                if (items.length === 0) { container.innerHTML = `<div style="color:var(--muted);text-align:center;padding:14px;background:var(--card);border-radius:10px;font-size:11px;">No reviews yet. Be the first!</div>`; return; }
-                container.innerHTML = items.map(item => `<div class="feedback-item"><div class="fi-header"><span class="fi-name">${item.name}</span><span class="fi-location">📍 ${item.city}, ${item.country}</span><span class="fi-stars">${'★'.repeat(item.rating)}${'☆'.repeat(5-item.rating)}</span></div><div class="fi-review">${item.review}</div><div class="fi-time">${item.time || new Date(item.timestamp).toLocaleString()}</div></div>`).join('');
-            });
-        }
-
-        function renderProjectSecurity(highlightId = null) {
-            const container = document.getElementById('projectSecurityList');
-            if (!container) return;
-            container.innerHTML = '';
-            PROJECTS.forEach(p => {
-                const div = document.createElement('div');
-                div.className = 'card';
-                if (p.id === highlightId) div.style.border = '2px solid var(--gold)';
-                div.innerHTML = `
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;"><span style="font-size:18px;">${p.icon}</span><h4 style="font-size:12px; color:${p.id === highlightId ? 'var(--gold)' : '#fff'};">${p.name}</h4></div>
-                    <div style="display:flex; flex-wrap:wrap; gap:2px;">${p.security.map(s => `<span style="font-size:7px; padding:2px 6px; border-radius:20px; background:rgba(0,210,255,0.04); border:1px solid rgba(0,210,255,0.06); color:var(--primary);">${s.label}</span>`).join('')}</div>
-                    <div style="margin-top:3px; font-size:8px; color:var(--muted);">${p.security.slice(0,3).map(s => `<div>• ${s.desc}</div>`).join('')}${p.security.length > 3 ? `<div style="color:#555;">+${p.security.length - 3} more features</div>` : ''}</div>
-                `;
-                container.appendChild(div);
-            });
-        }
-
-        function renderScreenshots() {
-            const container = document.getElementById('screenshotsGrid');
-            if (!container) return;
-            container.innerHTML = SCREENSHOTS.map(s => `<div class="screenshot-item"><img src="${s.file}" alt="${s.label}" class="screenshot-img" loading="lazy" onerror="this.style.display='none'" /><div class="screenshot-label"><b>${s.label}</b></div><div class="screenshot-desc">${s.desc}</div></div>`).join('');
-        }
-
-        function setRating2(value) { selectedRating2 = value; document.querySelectorAll('#starRatingInput2 .star').forEach(s => { s.classList.toggle('active', parseInt(s.dataset.value) <= value); }); document.getElementById('ratingDisplay2').textContent = `${value} ★ ${value === 1 ? 'star' : 'stars'}`; }
-
-        function populateProjectFilter() {
-            const projectFilter = document.getElementById('feedbackFilterProject');
-            if (!projectFilter) return;
-            const currentVal = projectFilter.value || 'all';
-            projectFilter.innerHTML = '<option value="all">All Projects</option>' + [
-                { id: 'my-market', name: '🛒 My-Market (Gyidi Bazar & Cinema)' },
-                { id: 'birthday-card', name: '🎂 Happy-Birthday-Card-Generator' },
-                { id: 'logo-generator', name: '🎨 Ap-Logo-Generator' }
-            ].map(p => `<option value="${p.id}">${p.name}</option>`).join('');
-            projectFilter.value = currentVal;
+            document.getElementById('ratingDisplay2').textContent = `${value} ★ ${value === 1 ? 'star' : 'stars'}`;
         }
 
         function loadAllFeedback() {
@@ -2125,39 +1767,38 @@
             populateProjectFilter();
             database.ref('feedbacks').on('value', snap => {
                 allFeedbacks = [];
-                snap.forEach(child => { const data = child.val(); if (data && data.project && data.name && data.review) { allFeedbacks.push({ id: child.key, ...data }); } });
+                feedbackIds = new Set();
+                snap.forEach(child => {
+                    const data = child.val();
+                    if (data && data.project && data.name && data.review) {
+                        const uniqueKey = `${data.name}_${data.project}_${data.review.substring(0, 20)}`;
+                        if (!feedbackIds.has(uniqueKey)) {
+                            feedbackIds.add(uniqueKey);
+                            allFeedbacks.push({ id: child.key, ...data });
+                        }
+                    }
+                });
                 allFeedbacks.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
-                console.log('📊 Loaded feedback count:', allFeedbacks.length);
+                console.log('📊 Loaded unique feedback count:', allFeedbacks.length);
                 applyFeedbackFilters();
                 updateStats();
-            }, error => { console.error('❌ Firebase error:', error); container.innerHTML = '<div style="color:var(--neon);font-size:11px;">❌ Failed to load feedback. Check console.</div>'; });
+            }, error => {
+                console.error('❌ Firebase error:', error);
+                container.innerHTML = '<div style="color:var(--neon);font-size:11px;">❌ Failed to load feedback. Check console.</div>';
+            });
         }
 
-        function submitFeedback2() {
-            const project = document.getElementById('fbProjectSelect').value;
-            const name = document.getElementById('fbName2').value.trim();
-            const city = document.getElementById('fbCity2').value.trim();
-            const country = document.getElementById('fbCountry2').value.trim();
-            const review = document.getElementById('fbReview2').value.trim();
-            if (!name || name.length < 2) return showToast('❌ Error', 'Name (min 2 chars)');
-            if (!city) return showToast('❌ Error', 'City required');
-            if (!country) return showToast('❌ Error', 'Country required');
-            if (!review || review.length < 5) return showToast('❌ Error', 'Review (min 5 chars)');
-            if (selectedRating2 === 0) return showToast('❌ Error', 'Select a rating');
-            const data = { name, city, country, rating: selectedRating2, review, project, timestamp: Date.now(), time: new Date().toLocaleString() };
-            console.log('📤 Submitting feedback:', data);
-            database.ref('feedbacks').push().set(data).then(() => {
-                console.log('✅ Feedback saved successfully!');
-                showToast('✅ Success', 'Feedback submitted! Thank you 🙏');
-                document.getElementById('fbName2').value = '';
-                document.getElementById('fbCity2').value = '';
-                document.getElementById('fbCountry2').value = '';
-                document.getElementById('fbReview2').value = '';
-                setRating2(0);
-                document.querySelectorAll('#starRatingInput2 .star').forEach(s => s.classList.remove('active'));
-                document.getElementById('ratingDisplay2').textContent = 'Select a rating';
-                updateStats();
-            }).catch(err => { console.error('❌ Firebase write error:', err); showToast('❌ Error', 'Failed to save: ' + err.message); });
+        function populateProjectFilter() {
+            const projectFilter = document.getElementById('feedbackFilterProject');
+            if (!projectFilter) return;
+            const currentVal = projectFilter.value || 'all';
+            projectFilter.innerHTML = '<option value="all">All Projects</option>' + [
+                { id: 'my-market', name: '🛒 My-Market (Gyidi Bazar & Cinema)' },
+                { id: 'birthday-card', name: '🎂 Happy-Birthday-Card-Generator' },
+                { id: 'logo-generator', name: '🎨 Ap-Logo-Generator' },
+                { id: 'affiliate-dashboard', name: '💰 Affiliate Dashboard' }
+            ].map(p => `<option value="${p.id}">${p.name}</option>`).join('');
+            projectFilter.value = currentVal;
         }
 
         function applyFeedbackFilters() {
@@ -2175,8 +1816,24 @@
             if (!container) return;
             const pageData = filtered.slice(0, FEEDBACKS_PER_PAGE);
             feedbacksLoaded = pageData.length;
-            if (pageData.length === 0) { container.innerHTML = `<div style="color:var(--muted);text-align:center;padding:24px;background:var(--card);border-radius:12px;font-size:11px;">No feedback found.</div>`; document.getElementById('loadMoreFeedback').style.display = 'none'; return; }
-            container.innerHTML = pageData.map(item => `<div class="feedback-item"><div class="fi-header"><span class="fi-name">${item.name}</span><span class="fi-location">📍 ${item.city}, ${item.country}</span><span class="fi-stars">${'★'.repeat(item.rating)}${'☆'.repeat(5-item.rating)}</span><span class="fi-project-tag">${PROJECTS.find(p => p.id === item.project)?.name || item.project}</span></div><div class="fi-review">${item.review}</div><div class="fi-time">${item.time || new Date(item.timestamp).toLocaleString()}</div></div>`).join('');
+            if (pageData.length === 0) {
+                container.innerHTML = `<div style="color:var(--muted);text-align:center;padding:24px;background:var(--card);border-radius:12px;font-size:11px;">No feedback found.</div>`;
+                document.getElementById('loadMoreFeedback').style.display = 'none';
+                return;
+            }
+            container.innerHTML = pageData.map(item => {
+                const projectName = PROJECTS.find(p => p.id === item.project)?.name || item.project;
+                return `<div class="feedback-item">
+                    <div class="fi-header">
+                        <span class="fi-name">${item.name}</span>
+                        <span class="fi-location">📍 ${item.city || 'Unknown'}, ${item.country || 'Unknown'}</span>
+                        <span class="fi-stars">${'★'.repeat(item.rating)}${'☆'.repeat(5-item.rating)}</span>
+                        <span class="fi-project-tag">${projectName}</span>
+                    </div>
+                    <div class="fi-review">${item.review}</div>
+                    <div class="fi-time">${item.time || new Date(item.timestamp).toLocaleString()}</div>
+                </div>`;
+            }).join('');
             document.getElementById('loadMoreFeedback').style.display = filtered.length > FEEDBACKS_PER_PAGE ? 'block' : 'none';
             window._allFilteredFeedback = filtered;
         }
@@ -2189,39 +1846,127 @@
             if (!container) return;
             for (let i = start; i < end; i++) {
                 const item = filtered[i];
+                const projectName = PROJECTS.find(p => p.id === item.project)?.name || item.project;
                 const div = document.createElement('div');
                 div.className = 'feedback-item';
-                div.innerHTML = `<div class="fi-header"><span class="fi-name">${item.name}</span><span class="fi-location">📍 ${item.city}, ${item.country}</span><span class="fi-stars">${'★'.repeat(item.rating)}${'☆'.repeat(5-item.rating)}</span><span class="fi-project-tag">${PROJECTS.find(p => p.id === item.project)?.name || item.project}</span></div><div class="fi-review">${item.review}</div><div class="fi-time">${item.time || new Date(item.timestamp).toLocaleString()}</div>`;
+                div.innerHTML = `
+                    <div class="fi-header">
+                        <span class="fi-name">${item.name}</span>
+                        <span class="fi-location">📍 ${item.city || 'Unknown'}, ${item.country || 'Unknown'}</span>
+                        <span class="fi-stars">${'★'.repeat(item.rating)}${'☆'.repeat(5-item.rating)}</span>
+                        <span class="fi-project-tag">${projectName}</span>
+                    </div>
+                    <div class="fi-review">${item.review}</div>
+                    <div class="fi-time">${item.time || new Date(item.timestamp).toLocaleString()}</div>
+                `;
                 container.appendChild(div);
             }
             feedbacksLoaded = end;
             if (end >= filtered.length) document.getElementById('loadMoreFeedback').style.display = 'none';
         }
 
-        function seedFeedbackData() {
-            database.ref('feedbacks').once('value', snap => {
-                if (snap.exists() && snap.numChildren() > 0) { console.log('✅ Feedback exists. Count:', snap.numChildren()); loadAllFeedback(); updateStats(); return; }
-                if (!confirm('🌱 No feedback found. Seed with 100+ sample reviews?')) { loadAllFeedback(); return; }
-                console.log('🌱 Seeding 100+ feedback entries...');
-                const batchSize = 20, total = SEED_FEEDBACKS.length;
-                let uploaded = 0;
-                function uploadBatch() {
-                    const batch = SEED_FEEDBACKS.slice(uploaded, uploaded + batchSize);
-                    Promise.all(batch.map(fb => database.ref('feedbacks').push().set(fb))).then(() => {
-                        uploaded += batch.length;
-                        console.log(`📊 ${uploaded}/${total}`);
-                        if (uploaded < total) setTimeout(uploadBatch, 400);
-                        else { console.log('✅ Seed complete!'); loadAllFeedback(); updateStats(); }
-                    }).catch(err => { console.error('❌ Seed error:', err); setTimeout(uploadBatch, 1000); });
-                }
-                uploadBatch();
+        function submitFeedback2() {
+            const project = document.getElementById('fbProjectSelect').value;
+            const name = document.getElementById('fbName2').value.trim();
+            const city = document.getElementById('fbCity2').value.trim();
+            const country = document.getElementById('fbCountry2').value.trim();
+            const review = document.getElementById('fbReview2').value.trim();
+            if (!name || name.length < 2) return showToast('❌ Error', 'Name (min 2 chars)');
+            if (!city) return showToast('❌ Error', 'City required');
+            if (!country) return showToast('❌ Error', 'Country required');
+            if (!review || review.length < 5) return showToast('❌ Error', 'Review (min 5 chars)');
+            if (selectedRating2 === 0) return showToast('❌ Error', 'Select a rating');
+
+            const uniqueKey = `${name}_${project}_${review.substring(0, 20)}`;
+            if (feedbackIds.has(uniqueKey)) {
+                return showToast('⚠️ Warning', 'You already submitted this feedback!');
+            }
+
+            const data = {
+                name,
+                city,
+                country,
+                rating: selectedRating2,
+                review,
+                project,
+                timestamp: Date.now(),
+                time: new Date().toLocaleString()
+            };
+            console.log('📤 Submitting feedback:', data);
+            database.ref('feedbacks').push().set(data).then(() => {
+                console.log('✅ Feedback saved successfully!');
+                showToast('✅ Success', 'Feedback submitted! Thank you 🙏');
+                document.getElementById('fbName2').value = '';
+                document.getElementById('fbCity2').value = '';
+                document.getElementById('fbCountry2').value = '';
+                document.getElementById('fbReview2').value = '';
+                setRating2(0);
+                document.querySelectorAll('#starRatingInput2 .star').forEach(s => s.classList.remove('active'));
+                document.getElementById('ratingDisplay2').textContent = 'Select a rating';
+                updateStats();
+            }).catch(err => {
+                console.error('❌ Firebase write error:', err);
+                showToast('❌ Error', 'Failed to save: ' + err.message);
+            });
+        }
+
+        function renderProjectSecurity() {
+            const container = document.getElementById('projectSecurityList');
+            if (!container) return;
+            container.innerHTML = '';
+            PROJECTS.forEach(p => {
+                const div = document.createElement('div');
+                div.className = 'card';
+                div.innerHTML = `
+                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                        <span style="font-size:18px;">${p.icon}</span>
+                        <h4 style="font-size:12px; color:#fff;">${p.name}</h4>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:2px;">
+                        ${p.security.map(s => `<span style="font-size:7px; padding:2px 6px; border-radius:20px; background:rgba(0,210,255,0.04); border:1px solid rgba(0,210,255,0.06); color:var(--primary);">${s.label}</span>`).join('')}
+                    </div>
+                    <div style="margin-top:3px; font-size:8px; color:var(--muted);">
+                        ${p.security.slice(0,3).map(s => `<div>• ${s.desc}</div>`).join('')}
+                        ${p.security.length > 3 ? `<div style="color:#555;">+${p.security.length - 3} more features</div>` : ''}
+                    </div>
+                `;
+                container.appendChild(div);
             });
         }
 
         function updateStats() {
-            database.ref('feedbacks').once('value', snap => { const count = snap.numChildren(); const el = document.getElementById('statFeedbacks'); if (el) el.textContent = count > 0 ? count + '+' : '100+'; });
-            const el = document.getElementById('statProjects'); if (el) el.textContent = '4';
+            database.ref('feedbacks').once('value', snap => {
+                const count = snap.numChildren();
+                const el = document.getElementById('statFeedbacks');
+                if (el) el.textContent = count > 0 ? count + '+' : '100+';
+            });
+            const el = document.getElementById('statProjects');
+            if (el) el.textContent = '5';
         }
+
+        function navigateTo(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            const target = document.getElementById('page-' + pageId);
+            if (target) target.classList.add('active');
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            document.querySelector(`.nav-links a[data-page="${pageId}"]`)?.classList.add('active');
+            document.getElementById('navLinks').classList.remove('open');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (pageId === 'feedback') loadAllFeedback();
+            if (pageId === 'project-info') renderProjectSecurity();
+            if (pageId === 'security') renderProjectSecurity();
+        }
+
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('open');
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.addEventListener('click', function() {
+                const page = this.dataset.page;
+                navigateTo(page);
+            });
+        });
 
         function submitContactForm(e) {
             e.preventDefault();
@@ -2253,19 +1998,18 @@
         }
 
         function init() {
-            seedFeedbackData();
-            renderProjects();
+            loadAllFeedback();
             renderProjectSecurity();
-            renderScreenshots();
             updateStats();
             populateProjectFilter();
             console.log('🏛️ Nightorbit Citadel — FIREBASE ENTERPRISE DEPLOYMENT');
             console.log('📊 Projects:', PROJECTS.length);
             console.log('🔥 Firebase Project:', firebaseConfig.projectId);
             console.log('✅ All features working!');
-            console.log('🏛️ CITADEL URL: https://nightorbit.github.io/AnasFarooq-Citadel');
+            console.log('🏛️ CITADEL URL: https://nightorbit.github.io/NightOrbit');
             console.log('🔥 DEPLOYED ON FIREBASE HOSTING — GOOGLE CLOUD PLATFORM');
             console.log('❌ GitHub Pages DISABLED — Professional. Secure. Trusted.');
+            console.log('💰 Affiliate Dashboard added with View Details button!');
         }
 
         document.addEventListener('DOMContentLoaded', init);
@@ -2275,17 +2019,16 @@
         window.toggleNav = toggleNav;
         window.setRating2 = setRating2;
         window.submitFeedback2 = submitFeedback2;
-        window.submitFeedbackDetail = submitFeedbackDetail;
         window.applyFeedbackFilters = applyFeedbackFilters;
         window.loadMoreFeedback = loadMoreFeedback;
         window.submitContactForm = submitContactForm;
         window.showToast = showToast;
         window.renderProjectSecurity = renderProjectSecurity;
-        window.loadProjectDetail = loadProjectDetail;
         window.populateProjectFilter = populateProjectFilter;
         window.openDatabaseModal = openDatabaseModal;
         window.closeDatabaseModal = closeDatabaseModal;
         window.checkDatabaseAccess = checkDatabaseAccess;
+        window.toggleProjectDetails = toggleProjectDetails;
     </script>
 </body>
 </html>
