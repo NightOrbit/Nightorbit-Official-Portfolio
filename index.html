@@ -34,12 +34,7 @@
             line-height: 1.6;
             min-height: 100vh;
         }
-        .page {
-             display: none;
-             padding-top: 65px;
-            min-height: 100vh;
-            background: var(--bg); /* 👈 ADD THIS LINE */
-        }
+       
         a { color: var(--primary); text-decoration: none; }
         a:hover { color: var(--gold); }
         ::-webkit-scrollbar { width: 5px; }
@@ -47,7 +42,37 @@
         ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  /* Force visibility for all pages */
+.page {
+    display: none;
+    padding-top: 65px;
+    min-height: 100vh;
+    background: var(--bg);
+    position: relative;
+    z-index: 1;
+}
 
+.page.active {
+    display: block !important;
+    background: var(--bg) !important;
+    min-height: 100vh;
+}
+
+/* Specific pages */
+#page-feedback,
+#page-authority,
+#page-contact,
+#page-project-info,
+#page-security {
+    background: var(--bg);
+    min-height: 100vh;
+}
+
+/* Container inside pages */
+.page .container {
+    background: transparent;
+    padding: 0 20px;
+}
         .citadel-badge {
             background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(0,210,255,0.08));
             border: 2px solid var(--gold);
