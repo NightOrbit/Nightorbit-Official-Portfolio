@@ -34,6 +34,12 @@
             line-height: 1.6;
             min-height: 100vh;
         }
+        .page {
+             display: none;
+             padding-top: 65px;
+            min-height: 100vh;
+            background: var(--bg); /* 👈 ADD THIS LINE */
+        }
         a { color: var(--primary); text-decoration: none; }
         a:hover { color: var(--gold); }
         ::-webkit-scrollbar { width: 5px; }
@@ -2170,18 +2176,24 @@
             if (el) el.textContent = '5';
         }
 
-        function navigateTo(pageId) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            const target = document.getElementById('page-' + pageId);
-            if (target) target.classList.add('active');
-            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-            document.querySelector(`.nav-links a[data-page="${pageId}"]`)?.classList.add('active');
-            document.getElementById('navLinks').classList.remove('open');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            if (pageId === 'feedback') loadAllFeedback();
-            if (pageId === 'project-info') renderProjectSecurity();
-            if (pageId === 'security') renderProjectSecurity();
-        }
+       function navigateTo(pageId) {
+    console.log('🔀 Navigating to:', pageId);
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + pageId);
+    if (target) {
+        target.classList.add('active');
+        console.log('✅ Page activated:', pageId);
+    } else {
+        console.warn('⚠️ Page not found:', pageId);
+    }
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.querySelector(`.nav-links a[data-page="${pageId}"]`)?.classList.add('active');
+    document.getElementById('navLinks').classList.remove('open');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (pageId === 'feedback') loadAllFeedback();
+    if (pageId === 'project-info') renderProjectSecurity();
+    if (pageId === 'security') renderProjectSecurity();
+}
 
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('open');
