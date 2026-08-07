@@ -34,7 +34,6 @@
             line-height: 1.6;
             min-height: 100vh;
         }
-       
         a { color: var(--primary); text-decoration: none; }
         a:hover { color: var(--gold); }
         ::-webkit-scrollbar { width: 5px; }
@@ -42,37 +41,7 @@
         ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-  /* Force visibility for all pages */
-.page {
-    display: none;
-    padding-top: 65px;
-    min-height: 100vh;
-    background: var(--bg);
-    position: relative;
-    z-index: 1;
-}
 
-.page.active {
-    display: block !important;
-    background: var(--bg) !important;
-    min-height: 100vh;
-}
-
-/* Specific pages */
-#page-feedback,
-#page-authority,
-#page-contact,
-#page-project-info,
-#page-security {
-    background: var(--bg);
-    min-height: 100vh;
-}
-
-/* Container inside pages */
-.page .container {
-    background: transparent;
-    padding: 0 20px;
-}
         .citadel-badge {
             background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(0,210,255,0.08));
             border: 2px solid var(--gold);
@@ -660,9 +629,7 @@
                     <a href="https://mymarketbaazar.web.app" target="_blank" class="btn-visit firebase" style="padding:8px 24px; font-size:12px;">🛒 Visit My-Market</a>
                     <button class="view-details-btn" onclick="navigateTo('project-info')" style="padding:6px 18px; font-size:10px;">📊 View Affiliate Details →</button>
                 </div>
-                <div style="margin-top:8px; font-size:10px; color:var(--muted);">
-                    <strong style="color:var(--gold);">📌 Prerequisite:</strong> Must be a registered Gyidi Bazar user with verified email.
-                </div>
+                
             </div>
 
             <div class="card" style="margin-bottom:12px;">
@@ -729,7 +696,7 @@
                 <span class="gold"><i class="fas fa-star"></i> 100% Legitimate</span>
             </div>
 
-            <!-- PROJECT 1: My-Market (Gyidi Bazar & Cinema) -->
+<!-- ===== PROJECT 1: My-Market (Gyidi Bazar & Cinema) - UPDATED ===== -->
 <div class="platform-card featured" style="margin-bottom:10px;">
     <span class="pc-badge">⭐ FLAGSHIP</span>
     <span class="pc-badge involve" style="right:80px;">🏛️ INVOLVE ASIA</span>
@@ -756,16 +723,75 @@
 
         <br><br>
 
+        <strong style="color:var(--gold);">🎬 CINEMA & ENTERTAINMENT (15 Platforms):</strong><br>
+        <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
+            Netflix · YouTube · Prime Video · Disney+ · Hulu TV · Hotstar · HBO Max · MX Player · Zee5 · Twitch Live · Crunchyroll · TED Talks · Vimeo · Plex Free TV · Dailymotion
+        </span>
+        <br>
+
+        <strong style="color:var(--gold);">🛒 INTERNATIONAL SHOPPING (8 Platforms):</strong><br>
+        <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
+            Banggood · Taobao · Lightinthebox · Alibaba · KKday · Cleartrip · StackSocial · Udemy
+        </span>
+        <br>
+
+        <strong style="color:var(--gold);">👗 INTERNATIONAL FASHION (2 Platforms):</strong><br>
+        <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
+            Love Bonito · Lightinthebox
+        </span>
+        <br>
+
+        <strong style="color:var(--gold);">🍔 INTERNATIONAL FOOD (2 Platforms):</strong><br>
+        <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
+            StackSocial · Airalo
+        </span>
+        <br>
+
+        <strong style="color:var(--gold);">📚 INTERNATIONAL EDUCATION (3 Platforms):</strong><br>
+        <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
+            Preply · SkillUp · International Open Academy
+        </span>
+        <br>
+
+        <strong style="color:var(--gold);">🛠️ INTERNATIONAL TOOLS & SOFTWARE (18 Platforms):</strong><br>
+        <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
+            Airwallex · Proton VPN · WPS Software · MacPaw · Hide Me VPN · iMobie · Wegic AI · Homestyler · LightPDF · GOM Lab · Pai Wellness · Proxy-Cheap · iMyFone · Auras Insurance · FusionHome AI · Airalo · SimOptions · TikTok B2B
+        </span>
+        <br>
+
+        <strong style="color:var(--gold);">🇵🇰 PAKISTAN SPECIAL (13 Platforms):</strong><br>
+        <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
+            <strong>Shopping (6):</strong> Banggood · Lightinthebox · Alibaba · StackSocial · Udemy · KKday<br>
+            <strong>Food (2):</strong> <span style="color:var(--gold);">TAZAonline</span> · Bask Bear Coffee<br>
+            <strong>Tools (5):</strong> Hide Me VPN · Wegic AI · Homestyler · LightPDF · GOM Lab
+        </span>
+        <br>
+
+        <strong style="color:var(--gold);">🇲🇾 MALAYSIA SPECIAL (15 Platforms):</strong><br>
+        <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
+            <strong>Shopping (6):</strong> Banggood · Taobao · Lightinthebox · Alibaba · StackSocial · Udemy<br>
+            <strong>Food (2):</strong> <span style="color:var(--gold);">TAZAonline</span> · Bask Bear Coffee<br>
+            <strong>Tools (7):</strong> Hide Me VPN · Wegic AI · Homestyler · LightPDF · GOM Lab · Airalo · FusionHome AI
+        </span>
+        <br>
+
+        <strong style="color:var(--gold);">📱 SOCIAL (1 Platform):</strong><br>
+        <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
+            TikTok B2B (Available in International, Pakistan & Malaysia)
+        </span>
+        <br>
+
         <strong style="color:var(--gold);">💰 EARNING SYSTEM:</strong><br>
-        Users earn <strong style="color:var(--gold);">coins</strong> through multiple methods:
         <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
             • <strong style="color:#fff;">Daily Streaks</strong> — 7-day streak bonus (+20 coins)<br>
             • <strong style="color:#fff;">Ad Watching</strong> — Watch 5 ads (50 coins)<br>
-            • <strong style="color:#fff;">Luck Wheel</strong> — Spin and win daily bonuses<br>
+            • <strong style="color:#fff;">Luck Wheel</strong> — Spin and win daily bonuses (5-100 coins)<br>
             • <strong style="color:#fff;">Referrals</strong> — Invite 5 friends (+200 coins)<br>
-            • <strong style="color:#fff;">Platform Clicks</strong> — Earn on every interaction
+            • <strong style="color:#fff;">Platform Clicks</strong> — Earn on every interaction (+1 coin)<br>
+            • <strong style="color:#39ff14;">Real Purchases</strong> — <strong style="color:#ffd700;">10 coins per Rs. 1000</strong> spent on partner platforms
         </span>
         <br>
+
         <strong style="color:var(--gold);">💳 WITHDRAWAL SYSTEM:</strong><br>
         <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
             • <strong style="color:#fff;">10 Coins = 1 PK Rupee</strong><br>
@@ -780,15 +806,34 @@
             My-Market is the <strong style="color:#39ff14;">primary platform for Nightorbit's affiliate program</strong>. 
             Users who register through affiliate links are <strong style="color:#ffd700;">permanently tracked</strong> and 
             affiliates earn <strong style="color:#39ff14;">4% lifetime commission</strong> on every purchase made by their referred users.
-            <br>
-            <strong style="color:#ffd700;">📌 Prerequisite:</strong> Must be a registered Gyidi Bazar user with verified email.
+           
+            
         </span>
         <br>
 
-        <strong style="color:var(--gold);">🌍 INTERNATIONAL BRANDS:</strong><br>
+        <strong style="color:var(--gold);">🌍 INTERNATIONAL BRANDS PARTNERSHIP:</strong><br>
         <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
-            My-Market features products from <strong style="color:#fff;">international brands</strong> — 
-            affiliates earn commission on <strong style="color:#39ff14;">ALL purchases</strong>, including global brands.
+            My-Market is now integrated with <strong style="color:#fff;">30+ international brands</strong> including:
+            <br>
+            <strong style="color:var(--gold);">Food Partners:</strong> <span style="color:#39ff14;">TAZAonline</span> (Pakistan & Malaysia), Foodpanda (Pakistan & Malaysia)<br>
+            <strong style="color:var(--gold);">AI & Tools:</strong> Wegic AI, Airwallex, Proton VPN, Hide Me VPN, WPS Software, MacPaw, iMobie, Homestyler, LightPDF, GOM Lab, FusionHome AI<br>
+            <strong style="color:var(--gold);">Shopping:</strong> Banggood, Alibaba, KKday, Cleartrip, StackSocial, Lightinthebox, Taobao<br>
+            <strong style="color:var(--gold);">Education:</strong> Udemy, Preply, SkillUp, International Open Academy<br>
+            <strong style="color:var(--gold);">Telecom:</strong> Airalo, SimOptions<br>
+            <strong style="color:var(--gold);">Social:</strong> TikTok B2B
+            <br><br>
+            Affiliates earn commission on <strong style="color:#39ff14;">ALL purchases</strong> from these brands!
+        </span>
+        <br>
+
+        <strong style="color:var(--gold);">✅ REAL PURCHASE VERIFICATION:</strong><br>
+        <span style="display:block; padding-left:14px; font-size:12px; color:var(--muted);">
+            Users must provide a <strong style="color:#fff;">screenshot of their order</strong> showing amount and time. 
+            After verification, coins are added to their account.
+            <br>
+            • <strong style="color:#fff;">Minimum Purchase:</strong> Rs. 100<br>
+            • <strong style="color:#fff;">Coins Earned:</strong> 10 coins per Rs. 1000<br>
+            • <strong style="color:#fff;">Verification Time:</strong> Within 24 hours
         </span>
         <br>
 
@@ -796,6 +841,7 @@
         <br>
         <strong style="color:var(--firebase-orange);">🔥 DEPLOYED ON FIREBASE HOSTING — GOOGLE CLOUD PLATFORM</strong>
         <br><br>
+
         <strong style="color:var(--gold);">🛡️ Security Features:</strong>
         <span style="display:block; padding-left:14px; font-size:11px; color:var(--muted);">
             • 256-bit SSL/TLS Encryption<br>
@@ -822,10 +868,13 @@
         <span class="sec-badge citadel">🏛️ Citadel</span>
         <span class="sec-badge gold">💰 4% Lifetime Commission</span>
         <span class="sec-badge neon">🔒 End-to-End Encryption</span>
+        <span class="sec-badge green">✅ Real Purchase Verification</span>
+        <span class="sec-badge gold">🌍 30+ Brands</span>
     </div>
 
     <ul class="feature-list">
         <li><span class="highlight">💰 Coin System</span> — Daily streaks · Ad watching · Luck wheel · Referrals · Clicks</li>
+        <li><span class="highlight">🛒 Real Purchase Earning</span> — 10 coins per Rs. 1000 spent on partner platforms</li>
         <li><span class="highlight">🔐 OTP Verification</span> — 6-digit signup · 5-digit withdrawal · 4-digit edits</li>
         <li><span class="highlight">🛡️ Anti-Cheat System</span> — Ad skip detection · Coin fraud detection</li>
         <li><span class="highlight">🧠 Human Verification</span> — Math CAPTCHA before OTP</li>
@@ -834,11 +883,13 @@
         <li><span class="highlight">📊 Zero Data Sharing</span> — Never sold or shared</li>
         <li><span class="highlight">🏛️ Involve Asia</span> — Officially approved partner</li>
         <li><span class="highlight">📱 PWA Ready</span> — Installable app experience</li>
-        <li><span class="highlight">🌍 International Brands</span> — Global products · Earn on all purchases</li>
+        <li><span class="highlight">🌍 International Brands</span> — 30+ brands · Earn on all purchases</li>
         <li><span class="highlight">🔗 Affiliate Integration</span> — 4% lifetime commission · Permanent tracking</li>
         <li><span class="highlight">💳 Auto-Payment</span> — JazzCash · EasyPaisa · Bank · No manual withdrawal</li>
         <li><span class="highlight">🔒 End-to-End Encryption</span> — 256-bit SSL/TLS · AES-256 · TLS 1.3</li>
         <li><span class="highlight">🌐 Global Reach</span> — 10K+ users · 12+ countries</li>
+        <li><span class="highlight">🍔 Food Partners</span> — TAZAonline (PK/MY) · Foodpanda (PK/MY)</li>
+        <li><span class="highlight">🤖 AI & Tools</span> — Wegic AI · Airwallex · Proton VPN · Hide Me VPN · FusionHome AI</li>
     </ul>
 
     <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;">
@@ -900,12 +951,27 @@
                 <div class="screenshot-desc">6-digit OTP, valid for 5 minutes with rate limiting.</div>
             </div>
             <div class="screenshot-item">
-                <img src="Screenshot 2026-07-02 192225.jpg" class="screenshot-img" loading="lazy" />
+                <img src="Screenshot 2026-08-07 190603.jpg" class="screenshot-img" loading="lazy" />
                 <div class="screenshot-label">🏠 Dashboard — Real-Time</div>
-                <div class="screenshot-desc">COINS balance, tabs (Cinema, All Platforms, PK, MY).</div>
+                <div class="screenshot-desc">COINS balance, tabs (Movies: 15 Platforms - Netflix, YouTube, Prime Video, Disney+, Hulu, Hotstar, HBO Max, MX Player, Zee5, Twitch, Crunchyroll, TED Talks, Vimeo, Plex, Dailymotion).</div>
             </div>
             <div class="screenshot-item">
-                <img src="Screenshot 2026-07-03 023755.jpg" class="screenshot-img" loading="lazy" />
+                <img src="Screenshot 2026-07-02 192225.jpg" class="screenshot-img" loading="lazy" />
+                <div class="screenshot-label">🏠 Dashboard — International Brands</div>
+                <div class="screenshot-desc">COINS balance, tabs (International: 8 Shopping, 2 Fashion, 2 Food, 3 Education, 18 Tools, 1 Social).</div>
+            </div>
+            <div class="screenshot-item">
+                <img src="Screenshot 2026-08-07 190140.jpg" class="screenshot-img" loading="lazy" />
+                <div class="screenshot-label">🏠 Dashboard — PK Special</div>
+                <div class="screenshot-desc">COINS balance, tabs (PK: 6 Shopping, 2 Food including TAZAonline, 5 Tools).</div>
+            </div>
+            <div class="screenshot-item">
+                <img src="Screenshot 2026-08-07 190251.jpg" class="screenshot-img" loading="lazy" />
+                <div class="screenshot-label">🏠 Dashboard — MY Special</div>
+                <div class="screenshot-desc">COINS balance, tabs (MY: 6 Shopping, 2 Food including TAZAonline, 7 Tools).</div>
+            </div>
+            <div class="screenshot-item">
+                <img src="Screenshot 2026-08-07 190823.jpg" class="screenshot-img" loading="lazy" />
                 <div class="screenshot-label">🏛️ Involve Asia — Official Approval</div>
                 <div class="screenshot-desc">Property Management Dashboard showing APPROVED status. Date Added: 25 March 2026.</div>
             </div>
@@ -962,22 +1028,26 @@
                 </div>
             </div>
 
- <!-- PROJECT 3: NightOrbit Birthday Card Generator -->
+<!-- PROJECT 3: NightOrbit Birthday Card Generator (HEAVY VERSION) -->
 <div class="platform-card featured" style="border-color:rgba(255,215,0,0.2); margin-bottom:10px;">
     <span class="pc-badge" style="background:#ffd700;color:#000;">🎂 FREE</span>
     <span class="pc-badge" style="right:90px;background:#39ff14;color:#000;">✅ NO SIGN-UP</span>
     <span class="pc-badge" style="right:190px;background:#00d2ff;color:#000;">🔒 PRIVATE</span>
     <span class="pc-badge" style="right:280px;background:#ff0055;color:#fff;">💰 30% COMMISSION</span>
+    <span class="pc-badge" style="right:380px;background:#b400ff;color:#fff;">🎨 100+ STYLES</span>
+    <span class="pc-badge" style="right:480px;background:#ff6b00;color:#fff;">🚀 ZERO LATENCY</span>
     <div class="pc-icon">🎂</div>
     <div class="pc-name">NightOrbit Birthday Card Generator</div>
     <div class="pc-url">https://nightorbitbirthdaycard.web.app/</div>
-    
+
     <div class="pc-desc">
+        <!-- Hero Section -->
         <div style="background:rgba(57,255,20,0.05); border:2px solid var(--neon-green); border-radius:12px; padding:12px 16px; margin-bottom:10px;">
             <strong style="color:var(--neon-green); font-size:1.1rem;">🎉 100% Free to Use — No Hidden Charges!</strong><br>
             <span style="color:#d0c8e8; font-size:0.9rem;">Create beautiful, personalized birthday cards instantly. No sign-up required, no credit card needed, and no data stored on servers.</span>
         </div>
 
+        <!-- About -->
         <strong style="color:#fff;">Dynamic birthday card generator</strong> with 
         <strong style="color:var(--gold);">zero-latency rendering</strong> and custom text transformation. 
         Uses complex text transformation modules and asynchronous layout render states to build unique assets 
@@ -986,75 +1056,180 @@
         <span style="color:var(--neon-green);">All processing is client-side — no data stored.</span>
 
         <br><br>
-        <strong style="color:var(--gold);">🎁 1 Month FREE VIP Trial:</strong><br>
-        <span style="color:#d0c8e8; font-size:0.9rem;">
-            • Unlock premium styles, fonts, and backgrounds<br>
-            • Access exclusive card templates<br>
-            • Try all VIP features risk-free for 30 days<br>
-            • <strong style="color:var(--neon-green);">Cancel anytime — no automatic charges</strong>
-        </span>
-
-        <br>
-        <strong style="color:var(--gold);">💎 Premium (Optional):</strong><br>
-        <span style="color:#d0c8e8; font-size:0.9rem;">
-            • <strong style="color:var(--neon-green);">Not required</strong> — use the generator completely free<br>
-            • Upgrade for extra styles and features if you love it<br>
-            • <strong style="color:var(--gold);">No pressure, no tricks</strong> — your choice!
-        </span>
-
-        <br>
-        <strong style="color:var(--gold);">🛡️ Your Privacy Matters:</strong><br>
-        <span style="color:#d0c8e8; font-size:0.9rem;">
-            • <strong style="color:var(--neon-green);">100% client-side processing</strong> — nothing leaves your device<br>
-            • <strong style="color:var(--neon-green);">Zero data storage</strong> — no servers, no uploads<br>
-            • <strong style="color:var(--neon-green);">No tracking, no analytics</strong> — complete privacy
-        </span>
-
-        <br>
-        <strong style="color:var(--gold);">📋 Trust & Legitimacy:</strong><br>
-        <span style="color:#d0c8e8; font-size:0.9rem;">
-            ✅ Built by <strong style="color:#fff;">NightOrbit International</strong> — an Involve Asia approved partner<br>
-            ✅ Deployed on <strong style="color:var(--firebase-orange);">Firebase Hosting (Google Cloud Platform)</strong><br>
-            ✅ <strong style="color:var(--neon-green);">100% legitimate</strong> — no scams, no hidden charges<br>
-            ✅ <strong style="color:var(--gold);">Transparent pricing</strong> — free forever, premium optional
-        </span>
 
         <!-- ============================================================
-        AFFILIATE PROGRAM — STANDALONE (NOT NIGHTORBIT AFFILIATE)
+        LOGIN & REGISTRATION SYSTEM — NO EMAIL REQUIRED
         ============================================================ -->
-        <br><br>
-        <div style="background:linear-gradient(135deg, rgba(255,215,0,0.05), rgba(255,0,85,0.03)); border:2px solid var(--gold); border-radius:12px; padding:14px 16px;">
-            <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
-                <span style="font-size:1.6rem;">🔗</span>
-                <strong style="color:var(--gold); font-size:1.1rem;">🎂 Birthday Card Affiliate Program — Earn 30%!</strong>
-                <span style="font-size:0.6rem; background:var(--neon); color:#fff; padding:2px 10px; border-radius:30px; font-weight:700;">STANDALONE</span>
+        <div style="background:linear-gradient(135deg, rgba(0,210,255,0.03), rgba(57,255,20,0.02)); border-radius:10px; padding:12px 16px; margin-bottom:8px; border:2px solid rgba(0,210,255,0.08);">
+            <strong style="color:var(--blue); font-size:1rem;">🔑 Login & Registration — No Email Required!</strong><br>
+            <span style="color:#d0c8e8; font-size:0.85rem;">
+                NightOrbit Birthday Card Generator uses a <strong style="color:#39ff14;">simple username and password</strong> system — 
+                <strong style="color:#ffd700;">no email required</strong> for login!
+            </span>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 16px; margin-top:6px; font-size:0.75rem; color:#cbd5e1;">
+                <div><span style="color:var(--gold);">👤 Username Rules:</span><br>
+                    • Only <strong style="color:#fff;">lowercase letters (a-z)</strong><br>
+                    • Minimum <strong style="color:#fff;">3 characters</strong><br>
+                    • Must be <strong style="color:#39ff14;">unique</strong> — system checks availability
+                </div>
+                <div><span style="color:var(--gold);">🔐 Password Rules:</span><br>
+                    • Minimum <strong style="color:#fff;">8 characters</strong><br>
+                    • Must contain <strong style="color:#ffd700;">1 uppercase</strong> letter<br>
+                    • Must contain <strong style="color:#ffd700;">1 symbol</strong> (!@#$%^&*)<br>
+                    • Must contain at least <strong style="color:#ffd700;">2 digits</strong>
+                </div>
             </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px 16px; font-size:0.8rem; color:#cbd5e1;">
-                <div><span style="color:var(--gold);">💰 Commission Rate:</span> <strong style="color:#fff;">30%</strong> on every VIP/paid subscription</div>
-                <div><span style="color:var(--gold);">🔄 Commission Model:</span> <strong style="color:#fff;">Lifetime Recurring</strong> — earn monthly!</div>
-                <div><span style="color:var(--gold);">📅 Payment:</span> <strong style="color:#fff;">Monthly</strong> (1st-10th of each month)</div>
-                <div><span style="color:var(--gold);">💰 Payout Limit:</span> <strong style="color:#39ff14;">No minimum limit</strong> — any amount sent!</div>
-                <div><span style="color:var(--gold);">⏳ Cookie Duration:</span> <strong style="color:#fff;">90 days</strong> — user has 3 months to purchase</div>
-                <div><span style="color:var(--gold);">💳 Payment Methods:</span> <strong style="color:#fff;">JazzCash, EasyPaisa, Bank Transfer</strong></div>
-                <div style="grid-column:span 2;"><span style="color:var(--gold);">📌 How It Works:</span> Share your affiliate link → User clicks → User purchases premium → You earn <strong style="color:#39ff14;">30% recurring commission</strong> every month!</div>
-                <div style="grid-column:span 2;"><span style="color:var(--gold);">⚠️ Important:</span> This is a <strong style="color:#fff;">standalone affiliate program</strong> — separate from Nightorbit's main affiliate system. You must apply through the Birthday Card affiliate portal.</div>
+            <div style="margin-top:6px; display:flex; gap:6px; flex-wrap:wrap;">
+                <span class="sec-badge green">✅ No Email Required</span>
+                <span class="sec-badge gold">🔐 Secure Password</span>
+                <span class="sec-badge blue">👤 Unique Username</span>
+                <span class="sec-badge neon">🔒 CAPTCHA Verified</span>
             </div>
-            <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
-                <a href="https://nightorbitbirthdaycard.web.app/NightOrbitBirthdayCardAffiliate.html" target="_blank" style="background:linear-gradient(135deg, var(--gold), #ff8c00); color:#1a1a2e; padding:6px 20px; border-radius:30px; font-weight:700; font-size:0.8rem; text-decoration:none; display:inline-block;">
-                    🔗 Join Affiliate Program (Standalone)
+        </div>
+
+        <!-- VIP Trial -->
+        <div style="background:linear-gradient(135deg, rgba(255,215,0,0.04), rgba(255,0,85,0.02)); border-radius:10px; padding:10px 14px; margin-bottom:8px; border:1px solid rgba(255,215,0,0.06);">
+            <strong style="color:var(--gold);">🎁 1 Month FREE VIP Trial:</strong><br>
+            <span style="color:#d0c8e8; font-size:0.85rem;">
+                • Unlock premium styles, fonts, and backgrounds<br>
+                • Access exclusive card templates<br>
+                • Try all VIP features risk-free for 30 days<br>
+                • <strong style="color:var(--neon-green);">Cancel anytime — no automatic charges</strong>
+            </span>
+        </div>
+
+        <!-- Premium -->
+        <div style="background:linear-gradient(135deg, rgba(0,210,255,0.03), rgba(57,255,20,0.02)); border-radius:10px; padding:10px 14px; margin-bottom:8px; border:1px solid rgba(0,210,255,0.04);">
+            <strong style="color:var(--gold);">💎 Premium (Optional):</strong><br>
+            <span style="color:#d0c8e8; font-size:0.85rem;">
+                • <strong style="color:var(--neon-green);">Not required</strong> — use the generator completely free<br>
+                • Upgrade for extra styles and features if you love it<br>
+                • <strong style="color:var(--gold);">No pressure, no tricks</strong> — your choice!
+            </span>
+        </div>
+
+        <!-- Privacy -->
+        <div style="background:rgba(57,255,20,0.02); border-radius:10px; padding:10px 14px; margin-bottom:8px; border:1px solid rgba(57,255,20,0.04);">
+            <strong style="color:var(--gold);">🛡️ Your Privacy Matters:</strong><br>
+            <span style="color:#d0c8e8; font-size:0.85rem;">
+                • <strong style="color:var(--neon-green);">100% client-side processing</strong> — nothing leaves your device<br>
+                • <strong style="color:var(--neon-green);">Zero data storage</strong> — no servers, no uploads<br>
+                • <strong style="color:var(--neon-green);">No tracking, no analytics</strong> — complete privacy
+            </span>
+        </div>
+
+        <!-- Trust -->
+        <div style="background:linear-gradient(135deg, rgba(255,215,0,0.03), rgba(0,210,255,0.02)); border-radius:10px; padding:10px 14px; margin-bottom:8px; border:1px solid rgba(255,215,0,0.04);">
+            <strong style="color:var(--gold);">📋 Trust & Legitimacy:</strong><br>
+            <span style="color:#d0c8e8; font-size:0.85rem;">
+                ✅ Deployed on <strong style="color:var(--firebase-orange);">Firebase Hosting (Google Cloud Platform)</strong><br>
+                ✅ <strong style="color:var(--neon-green);">100% legitimate</strong> — no scams, no hidden charges<br>
+                ✅ <strong style="color:var(--gold);">Transparent pricing</strong> — free forever, premium optional
+            </span>
+        </div>
+
+        <!-- ============================================================
+        AFFILIATE PROGRAM — FULL DETAILS
+        ============================================================ -->
+        <br>
+        <div style="background:linear-gradient(135deg, rgba(255,215,0,0.08), rgba(255,0,85,0.04)); border:2px solid var(--gold); border-radius:12px; padding:16px 18px; margin-bottom:6px;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap;">
+                <span style="font-size:1.8rem;">🔗</span>
+                <strong style="color:var(--gold); font-size:1.2rem;">🎂 Birthday Card Affiliate Program — Earn 30%!</strong>
+                <span style="font-size:0.6rem; background:var(--neon); color:#fff; padding:2px 14px; border-radius:30px; font-weight:700;">STANDALONE</span>
+                <span style="font-size:0.6rem; background:#39ff14; color:#000; padding:2px 14px; border-radius:30px; font-weight:700;">LIFETIME</span>
+            </div>
+
+            <!-- Email Connection Required -->
+            <div style="background:rgba(255,215,0,0.04); border-left:4px solid var(--gold); padding:8px 12px; border-radius:6px; margin-bottom:8px;">
+                <strong style="color:var(--gold);">⚠️ Important:</strong> To become an affiliate, you must first <strong style="color:#fff;">connect your real email</strong> to your Nightorbit username.
+            </div>
+
+            <!-- Steps -->
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:8px; margin-bottom:8px;">
+                <div style="background:rgba(255,255,255,0.02); border-radius:8px; padding:8px; text-align:center; border:1px solid rgba(255,255,255,0.03);">
+                    <div style="font-size:1.2rem;">📧</div>
+                    <div style="font-size:0.6rem; color:#fff; font-weight:600;">Step 1</div>
+                    <div style="font-size:0.55rem; color:var(--muted);">Connect Email</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.02); border-radius:8px; padding:8px; text-align:center; border:1px solid rgba(255,255,255,0.03);">
+                    <div style="font-size:1.2rem;">📝</div>
+                    <div style="font-size:0.6rem; color:#fff; font-weight:600;">Step 2</div>
+                    <div style="font-size:0.55rem; color:var(--muted);">Submit Request</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.02); border-radius:8px; padding:8px; text-align:center; border:1px solid rgba(255,255,255,0.03);">
+                    <div style="font-size:1.2rem;">⏳</div>
+                    <div style="font-size:0.6rem; color:#fff; font-weight:600;">Step 3</div>
+                    <div style="font-size:0.55rem; color:var(--muted);">Wait for Approval</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.02); border-radius:8px; padding:8px; text-align:center; border:1px solid rgba(255,255,255,0.03);">
+                    <div style="font-size:1.2rem;">🔗</div>
+                    <div style="font-size:0.6rem; color:#fff; font-weight:600;">Step 4</div>
+                    <div style="font-size:0.55rem; color:var(--muted);">Start Earning</div>
+                </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px 12px; font-size:0.75rem; color:#cbd5e1;">
+                <div><span style="color:var(--gold);">💰 Commission:</span> <strong style="color:#fff;">30%</strong> on every VIP subscription</div>
+                <div><span style="color:var(--gold);">🔄 Model:</span> <strong style="color:#fff;">Lifetime Recurring</strong></div>
+                <div><span style="color:var(--gold);">📅 Payment:</span> <strong style="color:#fff;">Monthly (1st-10th)</strong></div>
+                <div><span style="color:var(--gold);">💰 Payout:</span> <strong style="color:#39ff14;">No minimum limit</strong></div>
+                <div><span style="color:var(--gold);">⏳ Cookie:</span> <strong style="color:#fff;">90 days</strong></div>
+                <div><span style="color:var(--gold);">💳 Methods:</span> <strong style="color:#fff;">JazzCash, EasyPaisa, Bank</strong></div>
+                <div style="grid-column:span 3;"><span style="color:var(--gold);">📌 How It Works:</span> Share your affiliate link → User clicks → User purchases premium → You earn <strong style="color:#39ff14;">30% recurring commission</strong> every month!</div>
+                <div style="grid-column:span 3;"><span style="color:var(--gold);">📝 Apply Here:</span> <strong style="color:#00d2ff;">nightorbitbirthdaycard.web.app/NightOrbitBirthdayCardAffiliate.html</strong></div>
+            </div>
+
+            <!-- 90-Day Rule -->
+            <div style="background:rgba(255,0,85,0.03); border-radius:8px; padding:8px 12px; margin-top:8px; border:1px solid rgba(255,0,85,0.06);">
+                <strong style="color:var(--gold);">⏰ 90-Day Rule:</strong><br>
+                <span style="font-size:0.7rem; color:#cbd5e1;">
+                    <strong style="color:#ffd700;">You have 90 days</strong> from approval to refer users via your link.
+                    After 90 days, you <strong style="color:#ff0055;">must</strong> bring the user again through your link to continue earning commissions.
+                    <br>
+                    <strong style="color:#39ff14;">✅ Active users:</strong> If a referred user <strong style="color:#fff;">purchases VIP</strong> within the 90-day window, you earn <strong style="color:#39ff14;">30%</strong> on that purchase.
+                    <br>
+                    <strong style="color:#ffd700;">🔄 Recurring commission:</strong> For <strong style="color:#fff;">monthly subscriptions</strong>, you earn 30% <strong style="color:#39ff14;">every month</strong> the user stays subscribed.
+                </span>
+            </div>
+
+            <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+                <a href="https://nightorbitbirthdaycard.web.app/NightOrbitBirthdayCardAffiliate.html" target="_blank" style="background:linear-gradient(135deg, var(--gold), #ff8c00); color:#1a1a2e; padding:6px 24px; border-radius:30px; font-weight:700; font-size:0.8rem; text-decoration:none; display:inline-block;">
+                    📝 Apply Now (Standalone)
                 </a>
-                <a href="https://nightorbitbirthdaycard.web.app/NightOrbitBirthdayCardAffiliate.html" target="_blank" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); color:var(--muted); padding:6px 20px; border-radius:30px; font-weight:600; font-size:0.7rem; text-decoration:none; display:inline-block;">
+                <a href="https://nightorbitbirthdaycard.web.app/NightOrbitBirthdayCardAffiliate.html" target="_blank" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); color:var(--muted); padding:6px 24px; border-radius:30px; font-weight:600; font-size:0.75rem; text-decoration:none; display:inline-block;">
                     📊 Affiliate Dashboard
                 </a>
             </div>
+
             <div style="margin-top:6px; font-size:0.6rem; color:var(--muted);">
-                ⚡ <strong style="color:var(--gold);">Prerequisite:</strong> Must be a registered Gyidi Bazar user with verified email before applying for affiliate status.
-                <br>📝 <strong style="color:var(--gold);">Apply via:</strong> nightorbitbirthdaycard.web.app/NightOrbitBirthdayCardAffiliate.html
+                ⚡ <strong style="color:var(--gold);">Bonus for Affiliates:</strong> VIP access free for 3 months on approval!
             </div>
         </div>
         <!-- ============================================================
         END AFFILIATE SECTION
         ============================================================ -->
+
+        <!-- Features Summary -->
+        <br>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:8px; margin-top:6px;">
+            <div style="background:rgba(255,255,255,0.02); border-radius:8px; padding:8px; text-align:center; border:1px solid rgba(255,255,255,0.03);">
+                <div style="font-size:1.2rem;">🎁</div>
+                <div style="font-size:0.6rem; color:var(--muted);">1 Month Free VIP</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.02); border-radius:8px; padding:8px; text-align:center; border:1px solid rgba(255,255,255,0.03);">
+                <div style="font-size:1.2rem;">🔒</div>
+                <div style="font-size:0.6rem; color:var(--muted);">100% Private</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.02); border-radius:8px; padding:8px; text-align:center; border:1px solid rgba(255,255,255,0.03);">
+                <div style="font-size:1.2rem;">🚀</div>
+                <div style="font-size:0.6rem; color:var(--muted);">Zero Latency</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.02); border-radius:8px; padding:8px; text-align:center; border:1px solid rgba(255,255,255,0.03);">
+                <div style="font-size:1.2rem;">🎨</div>
+                <div style="font-size:0.6rem; color:var(--muted);">100+ Styles</div>
+            </div>
+        </div>
     </div>
 
     <div class="pc-tags">
@@ -1065,18 +1240,20 @@
         <span class="sec-badge firebase">🔥 Firebase Hosting</span>
         <span class="sec-badge citadel">🏛️ NightOrbit</span>
         <span class="sec-badge gold">💰 30% Commission</span>
+        <span class="sec-badge green">✅ No Sign-Up</span>
+        <span class="sec-badge blue">🔒 Private</span>
+        <span class="sec-badge gold">👤 No Email Required</span>
     </div>
 
     <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;">
-        <a href="https://nightorbitbirthdaycard.web.app/" target="_blank" class="btn-visit gold">🚀 Visit Generator</a>
+        <a href="https://nightorbitbirthdaycard.web.app/" target="_blank" class="btn-visit gold">🚀 Visit Generator (Firebase)</a>
         <a href="https://nightorbitbirthdaycard.web.app/NightOrbitBirthdayCardAffiliate.html" target="_blank" class="btn-visit" style="background:var(--gold); color:#000;">🔗 Become Affiliate</a>
         <button class="view-details-btn" onclick="toggleProjectDetails('birthday-card')">📸 View Screenshots →</button>
         <span style="font-size:7px;color:#555;display:flex;align-items:center;">⭐ 4.8 ★ (34+ reviews)</span>
     </div>
 
     <div id="birthday-card-details" style="display:none; margin-top:10px; border-top:1px solid rgba(255,255,255,0.04); padding-top:10px;">
-        
-        <!-- About This Tool -->
+        <!-- Full details inside -->
         <div style="background:rgba(255,215,0,0.02); border-radius:12px; padding:14px 16px; margin-bottom:12px; border-left:3px solid var(--gold);">
             <h4 style="color:var(--gold); font-size:0.9rem; margin-bottom:4px;">🎂 About NightOrbit Birthday Card Generator</h4>
             <p style="font-size:0.8rem; color:#cbd5e1; line-height:1.7;">
@@ -1086,7 +1263,7 @@
             </p>
         </div>
 
-        <!-- Features Grid -->
+        <!-- Features -->
         <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:12px;">
             <div style="background:var(--card-bg); border-radius:10px; padding:10px 12px; border:1px solid var(--border);">
                 <div style="font-size:1.4rem;">🎁</div>
@@ -1105,7 +1282,7 @@
             </div>
         </div>
 
-        <!-- Free vs VIP Comparison -->
+        <!-- Free vs VIP -->
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
             <div style="background:rgba(57,255,20,0.02); border-radius:10px; padding:10px 14px; border:1px solid rgba(57,255,20,0.06);">
                 <div style="font-weight:700; color:var(--neon-green); font-size:0.75rem;">✅ Free</div>
@@ -1131,56 +1308,66 @@
             </div>
         </div>
 
-        <!-- ============================================================
-        AFFILIATE PROGRAM FULL INFO — STANDALONE
-        ============================================================ -->
+        <!-- Affiliate Program Full -->
         <div style="background:linear-gradient(135deg, rgba(255,215,0,0.04), rgba(255,0,85,0.02)); border:2px solid var(--gold); border-radius:10px; padding:14px 16px; margin-bottom:12px;">
             <h4 style="color:var(--gold); font-size:0.85rem; margin-bottom:4px; display:flex; align-items:center; gap:8px;">
                 <span style="font-size:1.2rem;">🔗</span> Standalone Affiliate Program — 30% Lifetime Commission
             </h4>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 20px; font-size:0.7rem; color:#cbd5e1; line-height:1.8;">
-                <div><span style="color:var(--gold);">💰 Commission Rate:</span> <strong style="color:#fff;">30%</strong> on every VIP/paid subscription</div>
-                <div><span style="color:var(--gold);">🔄 Commission Model:</span> <strong style="color:#fff;">Lifetime Recurring</strong> — earn monthly!</div>
-                <div><span style="color:var(--gold);">📅 Payment Frequency:</span> <strong style="color:#fff;">Monthly</strong> (1st-10th)</div>
-                <div><span style="color:var(--gold);">💰 Payout Limit:</span> <strong style="color:#39ff14;">No minimum limit</strong> — any amount sent to your account!</div>
-                <div><span style="color:var(--gold);">⏳ Cookie Duration:</span> <strong style="color:#fff;">90 days</strong> — user has 3 months to purchase</div>
-                <div><span style="color:var(--gold);">💳 Payment Methods:</span> <strong style="color:#fff;">JazzCash, EasyPaisa, Bank Transfer</strong></div>
-                <div style="grid-column:span 2;"><span style="color:var(--gold);">🎁 Bonus for Affiliates:</span> <strong style="color:#fff;">VIP access free</strong> for 3 months!</div>
-                <div style="grid-column:span 2;"><span style="color:var(--gold);">📌 How It Works:</span> Share your affiliate link → User clicks → User purchases premium → You earn <strong style="color:#39ff14;">30% recurring commission</strong> every month the user stays subscribed!</div>
-                <div style="grid-column:span 2;"><span style="color:var(--gold);">📋 Prerequisite:</span> Must be a <strong style="color:#fff;">registered Gyidi Bazar user</strong> with verified email before applying.</div>
-                <div style="grid-column:span 2;"><span style="color:var(--gold);">⚠️ Important:</span> This is a <strong style="color:#fff;">standalone affiliate program</strong> — completely separate from Nightorbit's main affiliate system. You must apply through the Birthday Card affiliate portal.</div>
-                <div style="grid-column:span 2;"><span style="color:var(--gold);">📝 Apply Here:</span> <strong style="color:#00d2ff;">NightOrbitBirthdayCard/Affiliate-Dashboard/.html</strong> — submit your request for approval.</div>
+
+            <!-- Email Connection Required -->
+            <div style="background:rgba(255,215,0,0.04); border-left:4px solid var(--gold); padding:6px 10px; border-radius:4px; margin-bottom:6px;">
+                <strong style="color:var(--gold);">⚠️ Important:</strong> To become an affiliate, you must first <strong style="color:#fff;">connect your real email</strong> to your Nightorbit username.
             </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 20px; font-size:0.7rem; color:#cbd5e1; line-height:1.8;">
+                <div><span style="color:var(--gold);">💰 Commission:</span> <strong style="color:#fff;">30%</strong> on every VIP/paid subscription</div>
+                <div><span style="color:var(--gold);">🔄 Model:</span> <strong style="color:#fff;">Lifetime Recurring</strong></div>
+                <div><span style="color:var(--gold);">📅 Payment:</span> <strong style="color:#fff;">Monthly (1st-10th)</strong></div>
+                <div><span style="color:var(--gold);">💰 Payout:</span> <strong style="color:#39ff14;">No minimum limit</strong></div>
+                <div><span style="color:var(--gold);">⏳ Cookie:</span> <strong style="color:#fff;">90 days</strong></div>
+                <div><span style="color:var(--gold);">💳 Methods:</span> <strong style="color:#fff;">JazzCash, EasyPaisa, Bank</strong></div>
+                <div style="grid-column:span 2;"><span style="color:var(--gold);">🎁 Bonus:</span> <strong style="color:#fff;">VIP access free</strong> for 3 months!</div>
+                <div style="grid-column:span 2;"><span style="color:var(--gold);">📌 How It Works:</span> Share link → User clicks → Purchases → You earn <strong style="color:#39ff14;">30% recurring</strong></div>
+                <div style="grid-column:span 2;"><span style="color:var(--gold);">📋 Prerequisite:</span> <strong style="color:#fff;">Registered Gyidi Bazar user</strong> with verified email</div>
+                <div style="grid-column:span 2;"><span style="color:var(--gold);">📝 Apply:</span> <strong style="color:#00d2ff;">nightorbitbirthdaycard.web.app/NightOrbitBirthdayCardAffiliate.html</strong></div>
+            </div>
+
+            <!-- 90-Day Rule -->
+            <div style="background:rgba(255,0,85,0.03); border-radius:6px; padding:6px 10px; margin-top:6px; border:1px solid rgba(255,0,85,0.06);">
+                <strong style="color:var(--gold);">⏰ 90-Day Rule:</strong>
+                <span style="font-size:0.65rem; color:#cbd5e1;">
+                    You have <strong style="color:#ffd700;">90 days</strong> to refer users. After that, you <strong style="color:#ff0055;">must</strong> re-refer them. Earn <strong style="color:#39ff14;">30%</strong> on every VIP purchase within 90 days.
+                </span>
+            </div>
+
             <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
                 <a href="https://nightorbitbirthdaycard.web.app/NightOrbitBirthdayCardAffiliate.html" target="_blank" style="background:linear-gradient(135deg, var(--gold), #ff8c00); color:#1a1a2e; padding:6px 20px; border-radius:30px; font-weight:700; font-size:0.8rem; text-decoration:none; display:inline-block;">
-                    📝 Apply Now (Standalone)
-                </a>
-                <a href="https://nightorbitbirthdaycard.web.app/NightOrbitBirthdayCardAffiliate.html" target="_blank" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); color:var(--muted); padding:6px 20px; border-radius:30px; font-weight:600; font-size:0.7rem; text-decoration:none; display:inline-block;">
-                    📊 Affiliate Dashboard
+                    📝 Apply Now
                 </a>
             </div>
         </div>
 
-        <!-- Trust & Legitimacy -->
+        <!-- Trust -->
         <div style="background:rgba(0,210,255,0.02); border-radius:10px; padding:10px 14px; margin-bottom:12px; border:1px solid rgba(0,210,255,0.06);">
             <h4 style="color:var(--blue); font-size:0.8rem; margin-bottom:4px;">🛡️ Trust & Legitimacy</h4>
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px; font-size:0.65rem; color:#cbd5e1;">
                 <div>✅ <strong style="color:#fff;">100% Free</strong> — No hidden charges</div>
                 <div>✅ <strong style="color:#fff;">No Sign-Up Required</strong> — Use instantly</div>
-                <div>✅ <strong style="color:#fff;">No Data Stored</strong> — Client-side processing</div>
-                <div>✅ <strong style="color:#fff;">Legitimate</strong> — Built by NightOrbit International</div>
+                <div>✅ <strong style="color:#fff;">No Data Stored</strong> — Client-side</div>
+                <div>✅ <strong style="color:#fff;">Legitimate</strong> — NightOrbit International</div>
                 <div>✅ <strong style="color:#fff;">Involve Asia Approved</strong> — Official partner</div>
                 <div>✅ <strong style="color:#fff;">Firebase Hosting</strong> — Enterprise security</div>
-                <div>✅ <strong style="color:#fff;">Standalone Affiliate Program</strong> — 30% lifetime commission, no minimum payout</div>
+                <div>✅ <strong style="color:#fff;">Standalone Affiliate</strong> — 30% lifetime</div>
+                <div>✅ <strong style="color:#fff;">No Email Required</strong> — Username + Password login</div>
             </div>
         </div>
 
-        <!-- Screenshots Grid (New Updated) -->
+        <!-- Screenshots -->
         <div class="screenshots-grid">
             <div class="screenshot-item">
                 <img src="Screenshot 2026-08-05 073355.png" class="screenshot-img" loading="lazy" onerror="this.style.display='none'" />
                 <div class="screenshot-label">💎 VIP Membership — Free Trial</div>
-                <div class="screenshot-desc">1 Month FREE Trial · Then $4.99/month · Start Free Trial</div>
+                <div class="screenshot-desc">1 Month FREE Trial · Then $6.99/month</div>
             </div>
             <div class="screenshot-item">
                 <img src="Screenshot 2026-08-05 073521.png" class="screenshot-img" loading="lazy" onerror="this.style.display='none'" />
@@ -1218,20 +1405,115 @@
         <div style="background:rgba(57,255,20,0.03); border-radius:10px; padding:10px 14px; margin-top:10px; border:1px solid rgba(57,255,20,0.04);">
             <h4 style="color:var(--neon-green); font-size:0.8rem;">✅ Summary: Completely Free &amp; Legitimate</h4>
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px; font-size:0.65rem; color:#cbd5e1;">
-                <div>✅ <strong style="color:#fff;">Is it free?</strong> Yes — completely free to use</div>
-                <div>✅ <strong style="color:#fff;">Do I need to pay?</strong> No — premium is optional</div>
-                <div>✅ <strong style="color:#fff;">Is there a free trial?</strong> Yes — 1 Month free VIP trial</div>
-                <div>✅ <strong style="color:#fff;">Is my data safe?</strong> Yes — no data is stored or shared</div>
-                <div>✅ <strong style="color:#fff;">Is this legitimate?</strong> Yes — built by NightOrbit International</div>
-                <div>✅ <strong style="color:#fff;">Can I use it without registering?</strong> Yes — but registration unlocks more features</div>
-                <div>✅ <strong style="color:#fff;">Can I earn as an affiliate?</strong> Yes — <strong style="color:#39ff14;">30% lifetime commission</strong> on premium purchases!</div>
-                <div>✅ <strong style="color:#fff;">Is this Nightorbit affiliate?</strong> <strong style="color:#ff0055;">No</strong> — This is a <strong style="color:#fff;">standalone affiliate program</strong> with its own dashboard!</div>
+                <div>✅ <strong style="color:#fff;">Is it free?</strong> Yes</div>
+                <div>✅ <strong style="color:#fff;">Do I need to pay?</strong> No</div>
+                <div>✅ <strong style="color:#fff;">Free trial?</strong> Yes — 1 Month</div>
+                <div>✅ <strong style="color:#fff;">Is data safe?</strong> Yes</div>
+                <div>✅ <strong style="color:#fff;">Legitimate?</strong> Yes</div>
+                <div>✅ <strong style="color:#fff;">Affiliate?</strong> 30% lifetime</div>
+                <div>✅ <strong style="color:#fff;">Email required?</strong> <strong style="color:#39ff14;">No</strong> — Username + Password login</div>
+                <div>✅ <strong style="color:#fff;">Affiliate email?</strong> Yes — must connect email to apply</div>
             </div>
         </div>
     </div>
 </div>
 
-           
+            <!-- ===== PROJECT 4: AFFILIATE DASHBOARD (FIXED - WITH VIEW DETAILS BUTTON) ===== -->
+            <div class="platform-card">
+                <span class="pc-badge" style="background:var(--gold);color:#000;">🔗 AFFILIATE</span>
+                <div class="pc-icon">💰</div>
+                <div class="pc-name">NightOrbit Affiliate Dashboard</div>
+                <div class="pc-url">https://nightorbitaffiliatemarketing.web.app</div>
+                <div class="pc-desc">
+                    <strong style="color:#fff;">Complete affiliate marketing dashboard</strong> for Nightorbit's ecosystem.
+                    Manage your affiliate links, track <strong style="color:var(--gold);">lifetime commissions</strong>, 
+                    view earnings, and access payment details. <strong style="color:var(--neon-green);">Approved affiliates</strong> 
+                    earn lifetime commission on every referred user. Features include referral tracking, payment history, 
+                    and real-time earnings updates.
+                    <span style="color:var(--primary);">Fully integrated with Involve Asia's affiliate program.</span>
+                </div>
+                <div class="pc-tags">
+                    <span>Affiliate</span><span>Commission</span><span>Tracking</span>
+                    <span class="sec-badge gold">💰 Lifetime</span>
+                    <span class="sec-badge green">✅ Approved</span>
+                    <span class="sec-badge firebase">🔥 Firebase</span>
+                </div>
+                <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;">
+                    <a href="https://nightorbitaffiliatemarketing.web.app" target="_blank" class="btn-visit gold">🚀 Visit Dashboard</a>
+                    <button class="view-details-btn" onclick="toggleProjectDetails('affiliate-dashboard')">📸 View Details →</button>
+                    <span style="font-size:7px;color:#555;display:flex;align-items:center;">⭐ 4.8 ★ (12+ reviews)</span>
+                </div>
+                <div id="affiliate-dashboard-details" style="display:none; margin-top:10px; border-top:1px solid rgba(255,215,0,0.08); padding-top:10px;">
+                    <div class="screenshots-grid">
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 043553.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔑 Affiliate Login</div>
+                            <div class="screenshot-desc">Login with Gyidi Bazar email · nightorbit.official@gmail.com</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 043744.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📝 Submit New Request</div>
+                            <div class="screenshot-desc">Username, Email, Platforms (YouTube, TikTok, Instagram), Website URL, Message.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 043801.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📝 Request Form — Continue</div>
+                            <div class="screenshot-desc">Instagram username, Website URL (optional), Message with 94/100 chars.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 044250.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">✅ Request Submitted</div>
+                            <div class="screenshot-desc">Thank You! Processing time 24 hours to 2-3 working days.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 062307.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💰 Affiliate Dashboard — Earnings</div>
+                            <div class="screenshot-desc">PKR Rs. 10,000,000.00 Total Lifetime Commission · 1 Referral.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 041904.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔑 Affiliate Login Page</div>
+                            <div class="screenshot-desc">Email and Password fields · Only Gyidi Bazar registered emails allowed.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042254.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📊 Affiliate Dashboard — Waiting</div>
+                            <div class="screenshot-desc">Search dashboard · PKR Rs. 10,000,000.00 · Payment method required.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042346.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">📋 Affiliate Menu</div>
+                            <div class="screenshot-desc">REQUEST, PAYMENT DETAILS & HISTORY, REQUEST SUBMIT / HISTORY, PROFILE, LINKS, HELP CENTER, LOGOUT.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042505.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💳 Payment Details</div>
+                            <div class="screenshot-desc">No payment details saved yet. Add your payment information.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042522.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💳 Payment Details Form</div>
+                            <div class="screenshot-desc">Payment Method, Country, City, Full Address — Double-check all information.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042558.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">💳 Payment Form — Save</div>
+                            <div class="screenshot-desc">SAVE PAYMENT DETAILS · CANCEL · Important: Double-check all info.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 042627.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔗 My Affiliate Links</div>
+                            <div class="screenshot-desc">LOCKED — You need to be an approved affiliate to get links. GO TO REQUESTS.</div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="Screenshot 2026-07-30 062414.png" class="screenshot-img" loading="lazy" />
+                            <div class="screenshot-label">🔗 Approved Affiliate — Links</div>
+                            <div class="screenshot-desc">Your Unique Affiliate Link: https://mymarketbaazar.web.app/?ref=qkpyuqwfb7ba</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- PROJECT 5: Nightorbit Citadel -->
             <div class="platform-card">
                 <span class="pc-badge" style="background:var(--primary);color:#000;">🌙 IDENTITY</span>
@@ -1312,7 +1594,7 @@
             <li><strong style="color:#fff;">Payment Methods:</strong> JazzCash, EasyPaisa, Bank, International Wire</li>
             <li><strong style="color:#39ff14;">Auto-Payment:</strong> Nightorbit team sends payment directly to your verified account — <strong style="color:#ffd700;">no manual withdrawal request needed</strong></li>
             <li><strong style="color:#ffd700;">Verification Required:</strong> Payment sent only after account verification. If not verified, payment is carried over to next month</li>
-            <li><span class="hl-pink">✅</span> <strong style="color:#39ff14;">Goodwill Policy (For New Users &lt; 6 Months Active):</strong> Genuine effort is rewarded. If you don't reach the <strong style="color:#ffd700;">$30 minimum</strong> in your first month, you won't receive payment. However, if you work hard and in the second month you reach at least <strong style="color:#39ff14;">$18 (PKR 5,000)</strong> — half the minimum — we will gladly send you a partial payment. <strong style="color:#ffd700;">We never hold payments for more than 2 months.</strong> Your hard work matters to us! <span style="color:#b8b0d0; font-size:11px;">(This policy applies only to users who have been active for less than 6 months. For users with 7+ months of activity, the standard $30 minimum applies.)</span></li>
+            <li><strong style="color:#ffd700;">Goodwill Payment:</strong> If you work hard but don't reach $30, and your commission is at least $18 (PKR 5,000), we will still send you a partial payment. <strong style="color:#39ff14;">Your effort matters to us!</strong></li>
             <li><strong style="color:#ff0055;">Important:</strong> Always use your original, accurate payment details. Fake details = permanent ban.</li>
         </ul>
     </div>
@@ -1363,7 +1645,7 @@
             <li><span class="hl-pink">✅</span> Non-affiliates <strong style="color:#ff0055;">do not</strong> earn commission on referrals.</li>
             <li><span class="hl-pink">✅</span> <strong style="color:#39ff14;">Lifetime commission</strong> — once linked, always linked.</li>
             <li><span class="hl-pink">✅</span> Commission is credited <strong style="color:#ffd700;">automatically</strong> to the affiliate's wallet.</li>
-            <li><span class="hl-pink">✅</span> <strong style="color:#39ff14;">Goodwill Policy (For New Users &lt; 6 Months Active):</strong> Genuine effort is rewarded. If you don't reach the <strong style="color:#ffd700;">$30 minimum</strong> in your first month, you won't receive payment. However, if you work hard and in the second month you reach at least <strong style="color:#39ff14;">$18 (PKR 5,000)</strong> — half the minimum — we will gladly send you a partial payment. <strong style="color:#ffd700;">We never hold payments for more than 2 months.</strong> Your hard work matters to us! <span style="color:#b8b0d0; font-size:11px;">(This policy applies only to users who have been active for less than 6 months. For users with 7+ months of activity, the standard $30 minimum applies.)</span></li>  
+            <li><span class="hl-pink">✅</span> <strong style="color:#39ff14;">Goodwill Policy:</strong> Genuine effort is rewarded — partial payment ($18 / PKR 5,000) if you don't reach the minimum.</li>
             <li><span class="hl-pink">⚠️</span> <strong style="color:#ff0055;">Policy Violation:</strong> Affiliate link may be <strong style="color:#ff0055;">banned permanently</strong>.</li>
             <li><span class="hl-pink">⚠️</span> If an affiliate violates privacy or policy, <strong style="color:#ff0055;">all commissions are forfeited</strong> and account is banned.</li>
             <li><span class="hl-pink">⚠️</span> <strong style="color:#ffd700;">Fake Details = Permanent Ban:</strong> Always use your original, accurate information to avoid losing your hard-earned commissions.</li>
@@ -2201,24 +2483,18 @@
             if (el) el.textContent = '5';
         }
 
-       function navigateTo(pageId) {
-    console.log('🔀 Navigating to:', pageId);
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    const target = document.getElementById('page-' + pageId);
-    if (target) {
-        target.classList.add('active');
-        console.log('✅ Page activated:', pageId);
-    } else {
-        console.warn('⚠️ Page not found:', pageId);
-    }
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    document.querySelector(`.nav-links a[data-page="${pageId}"]`)?.classList.add('active');
-    document.getElementById('navLinks').classList.remove('open');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    if (pageId === 'feedback') loadAllFeedback();
-    if (pageId === 'project-info') renderProjectSecurity();
-    if (pageId === 'security') renderProjectSecurity();
-}
+        function navigateTo(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            const target = document.getElementById('page-' + pageId);
+            if (target) target.classList.add('active');
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            document.querySelector(`.nav-links a[data-page="${pageId}"]`)?.classList.add('active');
+            document.getElementById('navLinks').classList.remove('open');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (pageId === 'feedback') loadAllFeedback();
+            if (pageId === 'project-info') renderProjectSecurity();
+            if (pageId === 'security') renderProjectSecurity();
+        }
 
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('open');
